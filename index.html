@@ -410,356 +410,552 @@
         </div>
       </div>
 
-      <!-- Services Cards Grid (All 14 Services) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Services Cards Grid (All 14 Services - Flexbox layout ensuring perfect row alignment and centered last 2 items) -->
+      <div class="flex flex-wrap justify-center gap-8">
         
         <!-- Service 1: Extensions -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
-              alt="Home extensions in Norfolk" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Extensions';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Extensions
-            </span>
+        <div data-service="extensions" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                alt="Home extensions in Norfolk"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Extensions';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Extensions
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Extensions</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Single and double-storey home extensions, garden rooms, and sunrooms designed to seamlessly integrate with your existing property.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Groundworks, structural steel & brickwork</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Planning & building control management</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Extensions</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Single and double-storey home extensions, garden rooms, and sunrooms designed to seamlessly integrate with your existing property.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Groundworks, structural steel & brickwork</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Planning & building control management</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 2: Conversions -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
-              alt="Conversions in North Norfolk"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Conversions';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Conversions
-            </span>
+        <div data-service="conversions" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                alt="Conversions in North Norfolk"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Conversions';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Conversions
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Conversions</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Transforming unused spaces including barn conversions, garage adaptations, and loft conversions into beautiful living space.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Traditional barn & outbuilding conversions</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Loft adaptations & structural insulation</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Conversions</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Transforming unused spaces including barn conversions, garage adaptations, and loft conversions into beautiful living space.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Traditional barn & outbuilding conversions</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Loft adaptations & structural insulation</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 3: Renovations -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" 
-              alt="Home renovations in Norfolk"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Renovations';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Renovations
-            </span>
+        <div data-service="renovations" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+                alt="Home renovations in Norfolk"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Renovations';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Renovations
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Renovations</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Complete house refurbishments, period home overhauls, structural alterations, and internal reconfigurations.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Period cottage & house restorations</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Load-bearing wall removals & open-plan living</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Renovations</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Complete house refurbishments, period home overhauls, structural alterations, and internal reconfigurations.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Period cottage & house restorations</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Load-bearing wall removals & open-plan living</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 4: Kitchens -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" 
-              alt="Kitchen installations" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Kitchens';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Kitchens
-            </span>
+        <div data-service="kitchens" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
+                alt="Kitchen installations"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Kitchens';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Kitchens
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Kitchens</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Bespoke kitchen fitting, layout redesign, unit assembly, worktop installation, and appliance integration.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Custom cabinetry, islands & solid worktops</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Plumbing, gas & certified electrical connections</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Kitchens</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Bespoke kitchen fitting, layout redesign, unit assembly, worktop installation, and appliance integration.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Custom cabinetry, islands & solid worktops</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Plumbing, gas & certified electrical connections</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 5: Windows -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=800&q=80"
-              alt="Windows installation and supply"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Windows';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Windows
-            </span>
+        <div data-service="windows" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=800&q=80"
+                alt="Windows installation and supply"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Windows';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Windows
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Windows</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                High-performance timber, uPVC, and aluminium windows, heritage sash window repairs, and energy-efficient double glazing.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> FENSA registered installation</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Modern double/triple glazing & timber sashes</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Windows</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              High-performance timber, uPVC, and aluminium windows, heritage sash window repairs, and energy-efficient double glazing.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> FENSA registered installation</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Modern double/triple glazing & timber sashes</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 6: Bathrooms -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
-              alt="Bathroom design and installation"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Bathrooms';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Bathrooms
-            </span>
+        <div data-service="bathrooms" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
+                alt="Bathroom design and installation"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Bathrooms';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Bathrooms
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Bathrooms</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Complete bathroom design and fitting, walk-in wet rooms, en-suites, precision wall/floor tiling, and sanitaryware.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Tanking, waterproofing & wet room design</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Concealed valves, thermostatic showers & tiling</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Bathrooms</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Complete bathroom design and fitting, walk-in wet rooms, en-suites, precision wall/floor tiling, and sanitaryware.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Tanking, waterproofing & wet room design</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Concealed valves, thermostatic showers & tiling</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 7: Roofing -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
-              alt="Roofing services in Norfolk"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Roofing';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Roofing
-            </span>
+        <div data-service="roofing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+                alt="Roofing services in Norfolk"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Roofing';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Roofing
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Roofing</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Pitched slate and pantile re-roofing, flat roofing systems, chimney repairs, leadwork flashing, and rainwater guttering.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Norfolk slate, tile & EPDM flat roofing</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Lead flashing, fascia board & gutter replacement</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Roofing</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Pitched slate and pantile re-roofing, flat roofing systems, chimney repairs, leadwork flashing, and rainwater guttering.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Norfolk slate, tile & EPDM flat roofing</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Lead flashing, fascia board & gutter replacement</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 8: Electrical -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
-              alt="Electrical works"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Electrical';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Electrical
-            </span>
+        <div data-service="electrical" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+                alt="Electrical works"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Electrical';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Electrical
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Electrical</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Certified domestic electrical installations, full and partial rewires, consumer unit upgrades, and architectural lighting layouts.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Full & partial property rewiring</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Consumer units, LED & smart lighting design</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Electrical</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Certified domestic electrical installations, full and partial rewires, consumer unit upgrades, and architectural lighting layouts.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Full & partial property rewiring</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Consumer units, LED & smart lighting design</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 9: Damp Proofing & Timber -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-              alt="Damp proofing and timber treatments"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Damp+Proofing';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Damp Proofing & Timber
-            </span>
+        <div data-service="damp_proofing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+                alt="Damp proofing and timber treatments"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Damp+Proofing';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Damp Proofing & Timber
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Damp Proofing & Timber</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Specialist damp course injections, waterproof membrane installation, condensation control, dry rot treatment, and timber preservation.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Chemical damp proof courses & cavity membranes</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Dry/wet rot & woodworm timber treatments</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Damp Proofing & Timber</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Specialist damp course injections, waterproof membrane installation, condensation control, dry rot treatment, and timber preservation.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Chemical damp proof courses & cavity membranes</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Dry/wet rot & woodworm timber treatments</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 10: Pointing Works -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80" 
-              alt="Traditional brick and flint pointing"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Pointing';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Pointing Works
-            </span>
+        <div data-service="pointing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80"
+                alt="Traditional brick and flint pointing"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Pointing';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Pointing Works
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Pointing & Brick Works</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Traditional lime mortar repointing for historic Norfolk flint structures, brickwork repairs, and decorative masonry restoration.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Traditional Norfolk flint & lime pointing</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Brick tie replacement & structural wall repairs</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Pointing & Brick Works</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Traditional lime mortar repointing for historic Norfolk flint structures, brickwork repairs, and decorative masonry restoration.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Traditional Norfolk flint & lime pointing</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Brick tie replacement & structural wall repairs</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 11: Plumbing -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80"
-              alt="Plumbing and heating services"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Plumbing';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Plumbing
-            </span>
+        <div data-service="plumbing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80"
+                alt="Plumbing and heating services"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Plumbing';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Plumbing
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Plumbing & Heating</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Gas Safe registered plumbing and heating installations, boiler fitting, radiator upgrades, and full system maintenance.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Gas Safe registered boiler replacements & heating</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Domestic pipework, hot water cylinders & repairs</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Plumbing & Heating</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Gas Safe registered plumbing and heating installations, boiler fitting, radiator upgrades, and full system maintenance.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Gas Safe registered boiler replacements & heating</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Domestic pipework, hot water cylinders & repairs</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
         <!-- Service 12: Underfloor Heating -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
-              alt="Underfloor heating installation"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Underfloor+Heating';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Underfloor Heating
-            </span>
+        <div data-service="underfloor_heating" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+                alt="Underfloor heating installation"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Underfloor+Heating';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Underfloor Heating
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Underfloor Heating</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Energy-efficient wet and electric underfloor heating design, liquid screed pouring, and smart multi-zone temperature controls.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Wet underfloor heating design & screed</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Smart thermostat integration & zone controls</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Underfloor Heating</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Energy-efficient wet and electric underfloor heating design, liquid screed pouring, and smart multi-zone temperature controls.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Wet underfloor heating design & screed</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Smart thermostat integration & zone controls</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Service 13: Plastering -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80"
-              alt="Plastering and rendering"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Plastering';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Plastering
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Plastering</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Internal plastering, re-skimming, plasterboarding, ceiling repairs, and external weather-resistant rendering finishes.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> High-grade internal skimming & plasterboarding</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> External rendering & decorative lime repair</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
-        <!-- Service 14: Landscaping -->
-        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500/50 shadow-sm hover:shadow-lg transition duration-300">
-          <div class="h-52 overflow-hidden bg-stone-100 relative">
-            <img
-              src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=800&q=80"
-              alt="Landscaping and outdoor paving"
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Landscaping';"
-            />
-            <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
-              Landscaping
-            </span>
+        <!-- Service 13: Plastering (Centered in 5th row) -->
+        <div data-service="plastering" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80"
+                alt="Plastering and rendering"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Plastering';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Plastering
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Plastering</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Internal plastering, re-skimming, plasterboarding, ceiling repairs, and external weather-resistant rendering finishes.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> High-grade internal skimming & plasterboarding</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> External rendering & decorative lime repair</li>
+              </ul>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition">Landscaping</h3>
-            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-              Outdoor living spaces, porcelain patio paving, driveway installations, retaining walls, timber decking, and garden drainage.
-            </p>
-            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Porcelain & sandstone patio installation</li>
-              <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Retaining walls, timber decking & garden drainage</li>
-            </ul>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Service 14: Landscaping (Centered in 5th row) -->
+        <div data-service="landscaping" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-52 overflow-hidden bg-stone-100 relative">
+              <img
+                src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=800&q=80"
+                alt="Landscaping and outdoor paving"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Landscaping';"
+              />
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
+                Landscaping
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur text-navy-950 text-xs font-bold px-2.5 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition duration-200 flex items-center gap-1">
+                View Details & Gallery &rarr;
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>Landscaping</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                Outdoor living spaces, porcelain patio paving, driveway installations, retaining walls, timber decking, and garden drainage.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Porcelain & sandstone patio installation</li>
+                <li class="flex items-center gap-2"><span class="text-gold-600 font-bold">✓</span> Retaining walls, timber decking & garden drainage</li>
+              </ul>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>View Gallery & Details</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
           </div>
         </div>
 
@@ -1149,6 +1345,92 @@
     </div>
   </section>
 
+  <!-- Glassmorphic Service Details & Image Carousel Modal -->
+  <div id="service-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 hidden opacity-0 transition-opacity duration-300">
+    <!-- Backdrop Blur Overlay -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-navy-950/70 backdrop-blur-md transition-opacity"></div>
+
+    <!-- Glassmorphic Tile Container -->
+    <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-navy-950/85 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl text-white p-6 sm:p-8 z-10 custom-scrollbar transform scale-95 transition-transform duration-300">
+
+      <!-- Close Button -->
+      <button id="modal-close" type="button" class="absolute top-5 right-5 sm:top-6 sm:right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition focus:outline-none z-20" aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6 pr-10">
+        <span id="modal-badge" class="inline-block px-3 py-1 rounded-full bg-gold-500/20 border border-gold-400/30 text-gold-400 text-xs font-bold uppercase tracking-wider mb-2">
+          Service Category
+        </span>
+        <h2 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          Service Name
+        </h2>
+      </div>
+
+      <!-- Carousel Section -->
+      <div class="relative rounded-2xl overflow-hidden bg-navy-900/90 border border-white/10 shadow-inner mb-6 group">
+        <div id="carousel-slides" class="relative h-64 sm:h-80 md:h-96 w-full">
+          <!-- Slide Image injected by JS -->
+          <img id="carousel-img" src="" alt="" class="w-full h-full object-cover transition-all duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-black/20"></div>
+
+          <!-- Image Caption & Counter -->
+          <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4 text-xs">
+            <p id="carousel-caption" class="text-stone-200 font-medium bg-navy-950/70 backdrop-blur px-3 py-1.5 rounded-lg border border-white/10 max-w-[75%] truncate">
+              Image caption...
+            </p>
+            <span id="carousel-counter" class="text-gold-400 font-bold bg-navy-950/80 backdrop-blur px-3 py-1.5 rounded-lg border border-gold-500/30">
+              1 / 4
+            </span>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <button id="carousel-prev" type="button" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy-950/70 hover:bg-gold-500 text-white hover:text-navy-950 border border-white/20 flex items-center justify-center transition shadow-lg backdrop-blur focus:outline-none" aria-label="Previous image">
+          &#10094;
+        </button>
+        <button id="carousel-next" type="button" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy-950/70 hover:bg-gold-500 text-white hover:text-navy-950 border border-white/20 flex items-center justify-center transition shadow-lg backdrop-blur focus:outline-none" aria-label="Next image">
+          &#10095;
+        </button>
+
+        <!-- Carousel Dot Indicators -->
+        <div id="carousel-dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10">
+          <!-- Dots generated dynamically by JS -->
+        </div>
+      </div>
+
+      <!-- Service Details & Bullet Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start mb-8">
+        <div class="md:col-span-2 space-y-3">
+          <h3 class="text-lg font-bold text-gold-400">Overview & Scope of Work</h3>
+          <p id="modal-description" class="text-stone-300 text-sm leading-relaxed">
+            Detailed service information goes here...
+          </p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gold-400 mb-3">Key Project Deliverables</h4>
+          <ul id="modal-highlights" class="space-y-2 text-xs text-stone-200">
+            <!-- Highlights injected by JS -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Get a Quote Button & Footer Callout -->
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-center sm:text-left">
+          <p class="text-xs text-stone-400">Ready to discuss your project in North Norfolk?</p>
+          <p class="text-sm font-semibold text-white">Get a free, itemised quote from our head builders</p>
+        </div>
+        <button id="modal-quote-btn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-sm shadow-lg shadow-gold-500/20 hover:-translate-y-0.5 transition duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Get A Quote For This Service
+        </button>
+      </div>
+
+    </div>
+  </div>
+
   <footer class="bg-navy-950 text-stone-400 py-12 text-sm border-t border-navy-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -1258,7 +1540,399 @@
       });
     }
 
-    // 3. Mock Enquiry Form Submission (No alert())
+    // 3. Services Data & Glassmorphic Modal with Carousel Logic
+    const servicesData = {
+      extensions: {
+        title: "Extensions & Architectural Additions",
+        badge: "Structural Building",
+        description: "Oakwood Building Services specializes in high-quality single and double-storey extensions across North Norfolk. From modern open-plan kitchen diners to traditional flint-faced extensions and sunrooms, we handle every stage from initial site preparation to plastering and structural sign-off.",
+        highlights: [
+          "Full planning & building control support",
+          "Custom brick, flint & stone masonry matching",
+          "Structural steel insertion & knocked-through walls",
+          "Integrated glazing, bifold doors & roof lanterns"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Single-storey rear extension with architectural glazed bifolds" },
+          { url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80", caption: "Open-plan extension interior with vaulted ceiling & spot lighting" },
+          { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", caption: "Sunroom extension integration with garden views" },
+          { url: "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80", caption: "Precision brickwork and structural masonry on site" }
+        ]
+      },
+      conversions: {
+        title: "Barn, Loft & Garage Conversions",
+        badge: "Space Transformation",
+        description: "Transform existing structures into valuable, warm living areas. We sympathetically convert traditional Norfolk agricultural barns, unused garages, and loft spaces into additional bedrooms, luxury home offices, or self-contained holiday lets.",
+        highlights: [
+          "Traditional timber beam restoration & preservation",
+          "High-performance thermal & sound insulation",
+          "Dormer window and Velux skylight installation",
+          "Complete utility, electrical & plumbing fit-out"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", caption: "Character barn conversion with original exposed beams" },
+          { url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80", caption: "Garage conversion into contemporary master suite" },
+          { url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80", caption: "Loft bedroom conversion with custom fitted storage" },
+          { url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80", caption: "Open living space converted from traditional outbuilding" }
+        ]
+      },
+      renovations: {
+        title: "Full House & Period Home Renovations",
+        badge: "Turnkey Refurbishment",
+        description: "Complete refurbishment and structural reconfiguration for coastal cottages, period townhouses, and modern homes. We oversee all trades under unified project management to ensure seamless quality and stress-free execution.",
+        highlights: [
+          "Load-bearing wall removal & steel beam lintels",
+          "Heritage stone & Norfolk flint preservation",
+          "Complete electrical rewiring & plumbing updates",
+          "Bespoke joinery, flooring & internal finishing"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", caption: "Period cottage interior completely renovated and modernised" },
+          { url: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80", caption: "Open-plan ground floor layout reconfiguration" },
+          { url: "https://images.unsplash.com/photo-1600566753086-35f133c65dae?auto=format&fit=crop&w=1200&q=80", caption: "Contemporary living room finish with built-in hearth" },
+          { url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80", caption: "Full structural strip-out and groundwork preparation" }
+        ]
+      },
+      kitchens: {
+        title: "Bespoke Kitchen Design & Installation",
+        badge: "Interior Living",
+        description: "From classic shaker kitchens to handleless modern designs, our team handles complete kitchen installations including electrical modifications, plumbing adjustments, floor tiling, appliance integration, and solid stone worktop fitting.",
+        highlights: [
+          "Custom unit assembly & island installation",
+          "Quartz, granite, oak & solid surface worktops",
+          "Certified gas & electrical appliance connection",
+          "Under-cabinet LED lighting & backsplash tiling"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80", caption: "Modern open kitchen with central island and quartz worktops" },
+          { url: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80", caption: "Shaker style kitchen with brass fittings and breakfast bar" },
+          { url: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80", caption: "Contemporary dining and integrated kitchen layout" },
+          { url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", caption: "Custom kitchen joinery and precision tile backsplash" }
+        ]
+      },
+      windows: {
+        title: "Energy-Efficient Windows & Timber Sashes",
+        badge: "FENSA Registered",
+        description: "Enhance thermal performance and curb appeal with top-tier double and triple glazing. We supply and fit aluminium bifolds, timber sash windows for heritage properties, and low-maintenance uPVC casement windows across North Norfolk.",
+        highlights: [
+          "FENSA registered window supply & fitting",
+          "Heritage timber sash window repairs & drafts sealing",
+          "Slimline aluminium bifold & sliding patio doors",
+          "A-rated thermal energy glass units"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=1200&q=80", caption: "High-efficiency double glazed windows fitted in period property" },
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Large aluminium bifold doors opening onto garden terrace" },
+          { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", caption: "Custom timber window frame installation" },
+          { url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80", caption: "Full length architectural glass windows" }
+        ]
+      },
+      bathrooms: {
+        title: "Luxury Bathrooms & Wetroom Installations",
+        badge: "Sanitaryware & Tiling",
+        description: "Turn your bathroom into a spa-like retreat. Oakwood creates bespoke bathrooms, walk-in wet rooms, en-suites, and cloakrooms. We handle tanking, floor heating, concealed plumbing, tile layout, and high-end sanitaryware fitting.",
+        highlights: [
+          "100% waterproof tanking & wet room tray systems",
+          "Large format porcelain & ceramic wall/floor tiling",
+          "Concealed thermostatic shower valves & rain heads",
+          "Custom vanity units & LED touch mirrors"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80", caption: "Luxury wetroom with freestanding bath and marble porcelain tiles" },
+          { url: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80", caption: "Walk-in frameless glass shower enclosure with matte black fittings" },
+          { url: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80", caption: "Modern en-suite vanity with illuminated wall mirror" },
+          { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80", caption: "Precision plumbing, soil pipe & drainage preparation" }
+        ]
+      },
+      roofing: {
+        title: "Roofing, Slate, Pantiles & EPDM Flat Roofs",
+        badge: "Weatherproofing",
+        description: "Protecting your home from coastal elements. Our roofing services include complete re-roofing with traditional Norfolk pantiles or Welsh slate, EPDM rubber flat roofing, leadwork flashing, chimney repointing, and replacement fascia boards.",
+        highlights: [
+          "Norfolk pantile & slate re-roofing",
+          "Durable EPDM rubber & GRP flat roofing",
+          "Code 4 lead flashing & valley guttering",
+          "uPVC fascias, soffits & seamless guttering"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80", caption: "Traditional pitched slate roof installation" },
+          { url: "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80", caption: "Roof timber framing and tile battening" },
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Seamless flat roof extension integration with skylights" },
+          { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80", caption: "Chimney rebuild & lead dress flashing" }
+        ]
+      },
+      electrical: {
+        title: "Certified Domestic Electrical Services",
+        badge: "Electrical Compliance",
+        description: "Our certified electricians provide safe, modern domestic installations across North Norfolk. From full house rewires on period renovations to smart consumer unit upgrades and outdoor garden lighting design.",
+        highlights: [
+          "Full & partial domestic rewiring with completion certs",
+          "Modern metal-clad consumer unit (fuse box) upgrades",
+          "Architectural LED, downlight & ambient lighting schemes",
+          "EV charger point & outdoor IP-rated power"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80", caption: "Professional domestic distribution panel and rewiring" },
+          { url: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80", caption: "Integrated ceiling downlights and kitchen ambient strip LEDs" },
+          { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", caption: "Architectural lighting layout for renovated living room" },
+          { url: "https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=1200&q=80", caption: "Exterior waterproof garden lighting installation" }
+        ]
+      },
+      damp_proofing: {
+        title: "Damp Proofing, Cavity Membrane & Timber Care",
+        badge: "Property Protection",
+        description: "Protect your property from rising damp and timber decay. We offer chemical damp proof course (DPC) injections, studded cavity drain membranes, woodworm treatments, and dry/wet rot timber repair specialist solutions.",
+        highlights: [
+          "Chemical rising damp course injections",
+          "Waterproof cavity drain membrane systems",
+          "Timber decay, dry rot & woodworm eradication",
+          "Anti-condensation ventilation & moisture control"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80", caption: "Wall masonry preparation and damp proof injection treatment" },
+          { url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80", caption: "Cavity drain membrane installation in basement renovation" },
+          { url: "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80", caption: "Subfloor timber treatment and joist replacement" },
+          { url: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80", caption: "Breathable wall re-plastering following DPC installation" }
+        ]
+      },
+      pointing: {
+        title: "Norfolk Flint & Lime Mortar Pointing",
+        badge: "Heritage Masonry",
+        description: "Preserve the unique architectural heritage of North Norfolk. We specialize in traditional lime mortar repointing for flint work, brick restoration, wall tie replacement, and weather-proofing historic masonry facades.",
+        highlights: [
+          "Traditional NHL lime mortar pointing (breathable)",
+          "Historic Norfolk cobble & flint stone restoration",
+          "Helical stainless wall tie replacement",
+          "Brick cleaning, raking out & repointing"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80", caption: "Traditional lime mortar pointing on Norfolk flint wall" },
+          { url: "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80", caption: "Brickwork repair and structural masonry restoration" },
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Flint and brick facade integration on modern extension" },
+          { url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80", caption: "Raked mortar joints prepared for lime pointing" }
+        ]
+      },
+      plumbing: {
+        title: "Gas Safe Plumbing & Heating Engineering",
+        badge: "Gas Safe Certified",
+        description: "Gas Safe registered plumbers providing full heating system installations, high-efficiency boiler replacements, radiator upgrades, power flushing, and pipework modifications across North Norfolk.",
+        highlights: [
+          "Gas Safe registered boiler replacement & servicing",
+          "Full central heating design & radiator installation",
+          "Unvented hot water cylinders for high water pressure",
+          "Emergency pipework repairs & leak detection"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80", caption: "Professional boiler and central heating pipework installation" },
+          { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80", caption: "Designer radiator installation in renovated bathroom" },
+          { url: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80", caption: "Concealed thermostatic shower mixer plumbing" },
+          { url: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80", caption: "Kitchen plumbing & gas hob connection" }
+        ]
+      },
+      underfloor_heating: {
+        title: "Wet & Electric Underfloor Heating",
+        badge: "Thermal Comfort",
+        description: "Experience luxurious, uniform heat throughout your home. We install wet underfloor heating systems connected to modern boilers or heat pumps, liquid screed floors, and electric mat systems ideal for tiled bathrooms.",
+        highlights: [
+          "Multi-zone wet underfloor heating pipe layouts",
+          "Anhydrite & cementitious liquid screed pouring",
+          "Smart Wi-Fi digital thermostats for each room",
+          "Electric heat mats for bathroom tile warming"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", caption: "Underfloor heating manifold and pipe grid layout prior to screed" },
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Finished porcelain tiled floor with radiant underfloor heat" },
+          { url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80", caption: "Bathroom floor with integrated underfloor heating mat" },
+          { url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80", caption: "Smart thermostat zone control installation" }
+        ]
+      },
+      plastering: {
+        title: "Internal Plastering & External Rendering",
+        badge: "Smooth Finishes",
+        description: "Achieve flawless walls and ceilings. Our skilled plasterers deliver precision internal skimming, plasterboarding, coving, ceiling repairs, and durable weather-resistant external rendering finishes.",
+        highlights: [
+          "High-grade internal skimming & wall re-plastering",
+          "Drylining, stud walls & plasterboard ceilings",
+          "K-Rend & breathable silicone external rendering",
+          "Lime plastering for historic & listed properties"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1200&q=80", caption: "Freshly skimmed internal plaster walls ready for decoration" },
+          { url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80", caption: "Drylining plasterboard installation on vaulted ceiling" },
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Modern coloured silicone render finish on extension exterior" },
+          { url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80", caption: "Smooth ceiling plaster repair around spotlights" }
+        ]
+      },
+      landscaping: {
+        title: "Landscaping, Porcelain Patios & Paving",
+        badge: "Outdoor Living",
+        description: "Complete your property transformation with stunning outdoor spaces. Oakwood designs and constructs porcelain and natural stone patios, block paved driveways, timber decking, retaining walls, and effective garden drainage systems.",
+        highlights: [
+          "Porcelain & Indian sandstone patio installation",
+          "Block paving, gravel & cobble driveways",
+          "Timber decking, pergolas & composite fencing",
+          "Retaining walls, land leveling & French drains"
+        ],
+        gallery: [
+          { url: "https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=1200&q=80", caption: "Porcelain patio paving with flush indoor-outdoor threshold" },
+          { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", caption: "Landscaped garden terrace with timber pergolas" },
+          { url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80", caption: "Retaining stone walls and paved entrance pathway" },
+          { url: "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80", caption: "Groundwork excavation and patio sub-base compaction" }
+        ]
+      }
+    };
+
+    // Modal & Carousel State
+    let currentServiceKey = null;
+    let currentImageIndex = 0;
+
+    const modal = document.getElementById('service-modal');
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalClose = document.getElementById('modal-close');
+    const modalBadge = document.getElementById('modal-badge');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const modalHighlights = document.getElementById('modal-highlights');
+    const modalQuoteBtn = document.getElementById('modal-quote-btn');
+
+    const carouselImg = document.getElementById('carousel-img');
+    const carouselCaption = document.getElementById('carousel-caption');
+    const carouselCounter = document.getElementById('carousel-counter');
+    const carouselPrev = document.getElementById('carousel-prev');
+    const carouselNext = document.getElementById('carousel-next');
+    const carouselDots = document.getElementById('carousel-dots');
+
+    function updateCarousel() {
+      if (!currentServiceKey || !servicesData[currentServiceKey]) return;
+      const gallery = servicesData[currentServiceKey].gallery;
+      if (!gallery || gallery.length === 0) return;
+
+      if (currentImageIndex < 0) currentImageIndex = gallery.length - 1;
+      if (currentImageIndex >= gallery.length) currentImageIndex = 0;
+
+      const currentItem = gallery[currentImageIndex];
+
+      // Update image source & caption
+      carouselImg.style.opacity = '0.4';
+      setTimeout(() => {
+        carouselImg.src = currentItem.url;
+        carouselImg.alt = currentItem.caption;
+        carouselCaption.textContent = currentItem.caption;
+        carouselCounter.textContent = `${currentImageIndex + 1} / ${gallery.length}`;
+        carouselImg.style.opacity = '1';
+      }, 150);
+
+      // Render dot indicators
+      carouselDots.innerHTML = gallery.map((_, i) => `
+        <button type="button" class="w-2.5 h-2.5 rounded-full transition ${i === currentImageIndex ? 'bg-gold-400 w-6' : 'bg-white/40 hover:bg-white/70'}" data-dot="${i}" aria-label="Go to slide ${i+1}"></button>
+      `).join('');
+
+      // Add dot click listeners
+      carouselDots.querySelectorAll('button').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          currentImageIndex = parseInt(e.currentTarget.getAttribute('data-dot'), 10);
+          updateCarousel();
+        });
+      });
+    }
+
+    function openServiceModal(key) {
+      if (!servicesData[key]) return;
+      currentServiceKey = key;
+      currentImageIndex = 0;
+
+      const service = servicesData[key];
+      modalBadge.textContent = service.badge;
+      modalTitle.textContent = service.title;
+      modalDescription.textContent = service.description;
+
+      modalHighlights.innerHTML = service.highlights.map(h => `
+        <li class="flex items-start gap-2">
+          <span class="text-gold-400 font-bold shrink-0">✓</span>
+          <span>${h}</span>
+        </li>
+      `).join('');
+
+      updateCarousel();
+
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('.transform').classList.remove('scale-95');
+        modal.querySelector('.transform').classList.add('scale-100');
+      }, 10);
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeServiceModal() {
+      modal.classList.add('opacity-0');
+      if (modal.querySelector('.transform')) {
+        modal.querySelector('.transform').classList.remove('scale-100');
+        modal.querySelector('.transform').classList.add('scale-95');
+      }
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // Attach click handlers to all service cards
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const serviceKey = card.getAttribute('data-service');
+        if (serviceKey) {
+          openServiceModal(serviceKey);
+        }
+      });
+    });
+
+    // Carousel Navigation
+    if (carouselPrev && carouselNext) {
+      carouselPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentImageIndex--;
+        updateCarousel();
+      });
+      carouselNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentImageIndex++;
+        updateCarousel();
+      });
+    }
+
+    // Modal Close Events
+    if (modalClose) modalClose.addEventListener('click', closeServiceModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeServiceModal);
+
+    window.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeServiceModal();
+        if (e.key === 'ArrowLeft') { currentImageIndex--; updateCarousel(); }
+        if (e.key === 'ArrowRight') { currentImageIndex++; updateCarousel(); }
+      }
+    });
+
+    // "Get A Quote" Button on Modal Tile -> Scroll to Contact & Prefill Dropdown
+    if (modalQuoteBtn) {
+      modalQuoteBtn.addEventListener('click', () => {
+        closeServiceModal();
+
+        // Prefill contact form select field if matching option exists
+        const selectElement = document.querySelector('#consultation-form select');
+        if (selectElement && currentServiceKey) {
+          selectElement.value = currentServiceKey;
+        }
+
+        // Smooth scroll to contact section
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // 4. Mock Enquiry Form Submission (No alert())
     const form = document.getElementById('consultation-form');
     const feedback = document.getElementById('form-feedback');
 
