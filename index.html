@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oakwood Building Services | Builders North Norfolk</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf8f6',
+              100: '#f2e8e5',
+              200: '#eaddd7',
+              600: '#9a3412',
+              700: '#7c2d12',
+              800: '#6c2710',
+              900: '#431407',
+            },
+            oak: {
+              DEFAULT: '#b45309',
+              dark: '#78350f',
+              light: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    .font-serif-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    /* Comparison Slider styling */
+    .slider-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: white;
+      cursor: ew-resize;
+      transform: translateX(-50%);
+    }
+    .slider-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background: white;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-amber-700 selection:text-white">
+
+  <aside class="bg-stone-900 text-stone-300 text-xs py-2.5 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Trusted Local Builders across <strong>Cromer, Sheringham, Holt, Aylsham & North Walsham</strong></span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="mailto:oakwoodbs11@gmail.com" class="hover:text-white transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          oakwoodbs11@gmail.com
+        </a>
+        <a href="tel:07767234921" class="font-semibold text-white hover:text-amber-400 transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          07767 234 921
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 transition shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-lg bg-stone-900 flex items-center justify-center text-amber-500 shadow-md group-hover:bg-amber-800 transition">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <div>
+            <span class="block text-xl font-extrabold tracking-tight text-stone-900 leading-none">OAKWOOD</span>
+            <span class="text-xs uppercase tracking-widest text-amber-700 font-bold">Building Services Norfolk</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-stone-700">
+          <a href="#about" class="hover:text-amber-700 transition">About Us</a>
+          <a href="#services" class="hover:text-amber-700 transition">Services</a>
+          <a href="#before-after" class="hover:text-amber-700 transition">Before & After</a>
+          <a href="#projects" class="hover:text-amber-700 transition">Projects</a>
+          <a href="#reviews" class="hover:text-amber-700 transition">Reviews</a>
+          <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
+        </nav>
+
+        <!-- CTA Actions -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:07767234921" class="text-sm font-semibold text-stone-800 hover:text-amber-700 px-3 py-2">
+            07767 234 921
+          </a>
+          <a href="#contact" class="bg-amber-700 hover:bg-amber-800 text-white font-medium text-sm px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition duration-200">
+            Free Consultation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" type="button" class="lg:hidden p-2 text-stone-600 hover:text-stone-900 rounded-lg focus:outline-none" aria-label="Toggle menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-stone-200 bg-white px-4 pt-2 pb-6 space-y-3">
+      <a href="#about" class="block py-2 text-base font-medium text-stone-700 hover:text-amber-700">About Us</a>
+      <a href="#services" class="block py-2 text-base font-medium text-stone-700 hover:text-amber-700">Services</a>
+      <a href="#before-after" class="block py-2 text-base font-medium text-stone-700 hover:text-amber-700">Before & After</a>
+      <a href="#projects" class="block py-2 text-base font-medium text-stone-700 hover:text-amber-700">Projects</a>
+      <a href="#reviews" class="block py-2 text-base font-medium text-stone-700 hover:text-amber-700">Reviews</a>
+      <a href="#contact" class="block py-2 text-base font-medium text-amber-700 font-semibold">Get a Free Quote</a>
+      <a href="tel:07767234921" class="block w-full text-center bg-stone-900 text-white py-3 rounded-lg font-semibold mt-4">
+        Call 07767 234 921
+      </a>
+    </div>
+  </header>
+
+  <section class="relative bg-stone-950 text-white min-h-[580px] lg:min-h-[660px] flex items-center overflow-hidden">
+    <!-- Hero Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" 
+        alt="Modern bespoke home extension in North Norfolk" 
+        class="w-full h-full object-cover object-center opacity-30 transform scale-105 duration-1000 ease-out"
+        onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/1c1917/ffffff?text=Oakwood+Building+Services+Norfolk';"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/40"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          Norfolk's Trusted Craftsmen & Builders
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
+          A Reputation Earned <span class="text-amber-500 font-serif-heading italic font-normal">Project by Project.</span>
+        </h1>
+        
+        <p class="text-stone-300 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+          High-calibre building works across North Norfolk — from architectural extensions and flint renovations to kitchens, bathrooms, and complete property transformations.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-lg bg-amber-700 hover:bg-amber-600 text-white font-semibold text-base shadow-lg shadow-amber-900/40 hover:-translate-y-0.5 transition duration-200">
+            Book Free At-Home Consultation
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="#projects" class="inline-flex items-center justify-center px-7 py-4 rounded-lg bg-stone-900/80 hover:bg-stone-800 text-white font-semibold text-base border border-stone-700 transition">
+            View Recent Projects
+          </a>
+        </div>
+
+        <!-- Trust Badges Bar in Hero -->
+        <div class="pt-6 border-t border-stone-800/80 flex flex-wrap items-center gap-6 sm:gap-8 text-stone-400 text-xs sm:text-sm">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-500 font-bold text-base">★ 5.0</span>
+            <span>Google Verified Reviews</span>
+          </div>
+          <div class="h-4 w-px bg-stone-800 hidden sm:block"></div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Fully Insured & Guaranteed</span>
+          </div>
+          <div class="h-4 w-px bg-stone-800 hidden sm:block"></div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span>Covering all North Norfolk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Visual Grid of Real Norfolk Craftsmanship -->
+        <div class="grid grid-cols-2 gap-4 relative">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-md h-56 bg-stone-200">
+              <img 
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" 
+                alt="Norfolk extension interior finish" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Interior+Craft';"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md h-72 bg-stone-200">
+              <img 
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" 
+                alt="Bathroom renovation completed" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Bathroom+Renovation';"
+              />
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="rounded-2xl overflow-hidden shadow-md h-72 bg-stone-200">
+              <img 
+                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80" 
+                alt="Kitchen design and fitting" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Kitchen+Installation';"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md h-56 bg-stone-200">
+              <img 
+                src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=700&q=80" 
+                alt="Skilled bricklayers and builders on site" 
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Skilled+Builders';"
+              />
+            </div>
+          </div>
+          <!-- Experience Badge Overlay -->
+          <div class="absolute -bottom-4 -right-4 sm:bottom-6 sm:right-6 bg-stone-900 text-white p-5 rounded-xl shadow-xl border border-stone-800 max-w-[210px]">
+            <p class="text-3xl font-extrabold text-amber-500">100%</p>
+            <p class="text-xs text-stone-300 font-medium mt-1 leading-snug">Project management from design to final inspection</p>
+          </div>
+        </div>
+
+        <!-- Story & Philosophy Content -->
+        <div>
+          <div class="inline-block text-amber-700 font-semibold uppercase tracking-wider text-xs mb-3">
+            About Oakwood Building Services
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight mb-6">
+            Delivering Reliable Craftsmanship That Enhances Your Living Space
+          </h2>
+          <p class="text-stone-600 leading-relaxed mb-5">
+            Oakwood Building Services delivers high-quality building work across North Norfolk, including Cromer, Sheringham, Holt, Aylsham, North Walsham, and Stalham. From complex multi-storey extensions and barn conversions to modern kitchen fit-outs and historic flint repointing, we provide a reliable, fully managed service tailored to your home.
+          </p>
+          <p class="text-stone-600 leading-relaxed mb-6">
+            Our focus is on clear, honest communication, skilled workmanship, and respect for your home throughout every phase of construction. Every detail matters to us — because every completed job reflects the Oakwood name.
+          </p>
+
+          <div class="p-5 rounded-xl bg-amber-50/60 border border-amber-200/70 mb-8">
+            <blockquote class="italic text-stone-800 text-sm">
+              "We can fully recommend this company for its professional workmanship and management. The workforce are all very friendly and polite."
+            </blockquote>
+            <cite class="block mt-2 font-bold text-xs uppercase tracking-wide text-amber-800 not-italic">
+              — R Roper, Google Verified Review
+            </cite>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-stone-900 hover:bg-stone-800 text-white font-medium text-sm transition">
+              Discuss Your Property
+            </a>
+            <a href="tel:07767234921" class="text-stone-700 hover:text-amber-700 font-medium text-sm flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Direct Line: 07767 234 921
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="before-after" class="py-20 bg-stone-100 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-700 font-semibold uppercase tracking-wider text-xs">Transformations</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-2">
+          Before & After Showcase
+        </h2>
+        <p class="text-stone-600 mt-3 text-sm sm:text-base">
+          Drag the slider below to see how our team transforms dated properties and overgrown plots into contemporary living spaces.
+        </p>
+      </div>
+
+      <!-- Comparison Container -->
+      <div class="max-w-4xl mx-auto bg-white p-3 rounded-2xl shadow-xl border border-stone-200">
+        <div id="comparison-container" class="relative w-full h-[360px] sm:h-[480px] rounded-xl overflow-hidden select-none cursor-ew-resize">
+          <!-- After Image (Background) -->
+          <img 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" 
+            alt="After Renovation & Extension" 
+            class="absolute inset-0 w-full h-full object-cover"
+            onerror="this.onerror=null; this.src='https://placehold.co/1200x800/222/fff?text=After+Renovation';"
+          />
+          <span class="absolute top-4 right-4 bg-stone-900/80 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10">
+            After: Finished Project
+          </span>
+
+          <!-- Before Image (Clipped Foreground) -->
+          <div id="before-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white">
+            <img 
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80" 
+              alt="Before Renovation & Extension" 
+              class="absolute inset-0 w-full h-full object-cover max-w-none"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              id="before-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/1200x800/555/fff?text=Before+Renovation';"
+            />
+            <span class="absolute top-4 left-4 bg-amber-700/90 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10">
+              Before Construction
+            </span>
+          </div>
+
+          <!-- Divider Slider Bar -->
+          <div id="slider-bar" class="slider-handle left-1/2">
+            <div class="slider-circle">
+              <svg class="w-5 h-5 text-stone-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3m8-6l4 3-4 3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider project caption -->
+        <div class="flex flex-col sm:flex-row justify-between items-center px-4 py-4 mt-2 gap-3 text-sm text-stone-600">
+          <div>
+            <strong class="text-stone-900">Norfolk Barn Conversion & Glazed Extension</strong>
+            <p class="text-xs text-stone-500">Stripped back to core timber frame, damp treated, and rebuilt with full insulation and bifold system.</p>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 bg-stone-100 rounded text-stone-700">Drag or swipe slider</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <span class="text-amber-700 font-semibold uppercase tracking-wider text-xs">Our Trade Disciplines</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-1">
+            Complete Building & Renovation Services
+          </h2>
+          <p class="text-stone-600 mt-2 text-base max-w-xl">
+            From preliminary groundwork to turnkey internal completions, we bring skilled Norfolk tradesmen together under unified project management.
+          </p>
+        </div>
+        <div class="shrink-0">
+          <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-700 hover:text-amber-800">
+            Request an itemised quote &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Extensions -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-500/50 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="h-52 overflow-hidden bg-stone-100 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+              alt="Home extensions in Norfolk" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Extensions';"
+            />
+            <span class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
+              Extensions
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-stone-900 group-hover:text-amber-700 transition">Extensions & Additions</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              Single and double-storey extensions created to seamlessly integrate with your home's existing roofline, brickwork, and character.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Full planning & building control liaison</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Groundworks, structural steel & masonry</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 2: Renovations & Conversions -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-500/50 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="h-52 overflow-hidden bg-stone-100 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" 
+              alt="Home renovation and conversions" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Renovations';"
+            />
+            <span class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
+              Conversions & Renovations
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-stone-900 group-hover:text-amber-700 transition">Renovations & Conversions</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              Barn conversions, loft adaptations, and whole-house renovations that maximise living space and increase market value.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Structural alterations & partition removals</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Thermal upgrades and insulation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 3: Kitchens -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-500/50 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="h-52 overflow-hidden bg-stone-100 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" 
+              alt="Kitchen installations" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Kitchens';"
+            />
+            <span class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
+              Kitchens
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-stone-900 group-hover:text-amber-700 transition">Bespoke Kitchens</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              Complete kitchen installations including layout redesign, bespoke cabinetry, worktop fitting, and integrated appliances.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Plumbing, gas & certified electricals</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Island construction & splashback tiling</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 4: Bathrooms & Wetrooms -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-500/50 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="h-52 overflow-hidden bg-stone-100 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
+              alt="Bathroom design and tiling" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Bathrooms';"
+            />
+            <span class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
+              Bathrooms
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-stone-900 group-hover:text-amber-700 transition">Bathrooms & Wet Rooms</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              Luxury bathroom suites, walk-in wet rooms, precision floor-to-ceiling tiling, and concealed thermostatic plumbing.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Complete tanking and waterproofing</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> En-suite creation & cloakrooms</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 5: Roofing & Pointing -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-500/50 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="h-52 overflow-hidden bg-stone-100 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80" 
+              alt="Roofing and traditional flint brick pointing" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Roofing+and+Pointing';"
+            />
+            <span class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
+              Roofing & Flint Pointing
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-stone-900 group-hover:text-amber-700 transition">Roofing & Pointing Works</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              Specialist traditional lime mortar pointing for Norfolk flint houses, alongside pitched slate/tile roofing and modern flat roof solutions.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Traditional Norfolk flint restoration</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Chimney repairs, lead flashing & guttering</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 6: Plumbing, Heating & Landscaping -->
+        <div class="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-500/50 shadow-sm hover:shadow-lg transition duration-300">
+          <div class="h-52 overflow-hidden bg-stone-100 relative">
+            <img 
+              src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=800&q=80" 
+              alt="Paving, underfloor heating and landscaping" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Heating+and+Landscaping';"
+            />
+            <span class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded">
+              Heating & Landscaping
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-stone-900 group-hover:text-amber-700 transition">Underfloor Heating & Landscaping</h3>
+            <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+              Energy-efficient screed and underfloor heating systems paired with outdoor porcelain patios, retaining walls, and timber decking.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-stone-500">
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Wet underfloor heating design & screed</li>
+              <li class="flex items-center gap-2"><span class="text-amber-600 font-bold">✓</span> Exterior patios, drainage & fencing</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-amber-500 font-semibold uppercase tracking-wider text-xs">Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1 text-white">
+            Recent Projects in North Norfolk
+          </h2>
+          <p class="text-stone-400 mt-2 text-sm sm:text-base max-w-xl">
+            Take a look at some of our completed work across Hindolveston, Cromer, Sheringham, and Holt.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Project 1: Hindolveston Extension -->
+        <article class="bg-stone-800 rounded-2xl overflow-hidden border border-stone-700/80 group">
+          <div class="h-64 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
+              alt="Hindolveston Extension" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/333/fff?text=Hindolveston+Project';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute bottom-4 left-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Hindolveston
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Hindolveston Extension</h3>
+            <p class="text-stone-300 text-sm leading-relaxed mb-4">
+              Large single-storey rear kitchen/diner extension featuring aluminium bifold doors, roof lanterns, and underfloor heating throughout.
+            </p>
+            <div class="pt-4 border-t border-stone-700 flex justify-between items-center text-xs text-stone-400">
+              <span>Completed: 14 Weeks</span>
+              <span class="text-amber-400 font-medium">Full Project Management</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: The Rise, Sheringham -->
+        <article class="bg-stone-800 rounded-2xl overflow-hidden border border-stone-700/80 group">
+          <div class="h-64 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" 
+              alt="The Rise, Sheringham Renovation" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/333/fff?text=Sheringham+Project';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute bottom-4 left-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Sheringham
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">The Rise, Sheringham</h3>
+            <p class="text-stone-300 text-sm leading-relaxed mb-4">
+              Full interior renovation including structural wall removal to establish open-plan living, newly fitted luxury kitchen, and bespoke bathrooms.
+            </p>
+            <div class="pt-4 border-t border-stone-700 flex justify-between items-center text-xs text-stone-400">
+              <span>Completed: 10 Weeks</span>
+              <span class="text-amber-400 font-medium">Turnkey Finish</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Norwich Road, Cromer -->
+        <article class="bg-stone-800 rounded-2xl overflow-hidden border border-stone-700/80 group">
+          <div class="h-64 overflow-hidden relative">
+            <img 
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" 
+              alt="Norwich Road, Cromer Project" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/333/fff?text=Cromer+Project';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute bottom-4 left-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Cromer
+            </span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Norwich Road, Cromer</h3>
+            <p class="text-stone-300 text-sm leading-relaxed mb-4">
+              Period Victorian townhouse overhaul including damp proofing, traditional brick pointing, brand-new timber sash windows, and roof repairs.
+            </p>
+            <div class="pt-4 border-t border-stone-700 flex justify-between items-center text-xs text-stone-400">
+              <span>Completed: 12 Weeks</span>
+              <span class="text-amber-400 font-medium">Heritage Restoration</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-amber-700 font-semibold uppercase tracking-wider text-xs">The Oakwood Standard</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-2">
+          Why Choose Oakwood Building Services?
+        </h2>
+        <p class="text-stone-600 mt-3 text-sm sm:text-base">
+          Building a dream home in North Norfolk shouldn't feel daunting. Here is why our clients recommend us project after project.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Pillar 1 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-stone-200">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg mb-5">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Local Expertise</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            Steeped in North Norfolk's landscape, we guide your project smoothly through local building control while respecting the area's architectural heritage.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-stone-200">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg mb-5">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Free In-Home Consultations</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            Our friendly experts listen to your ideas right at your property, assessing feasibility and offering practical guidance with zero obligation.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-stone-200">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg mb-5">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Skilled Tradesmen</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            Passionate precision: experienced, certified trades who take pride in clean execution, polite conduct, and leaving the site spotless each day.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-stone-200">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg mb-5">
+            04
+          </div>
+          <h3 class="text-lg font-bold text-stone-900 mb-2">Trust & Accountability</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            As the saying goes: "You're only as good as your last job." We uphold our reputation by doing what we promised, when we promised, on budget.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="flex items-center justify-center gap-1 mb-2 text-amber-500">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <span class="text-amber-700 font-semibold uppercase tracking-wider text-xs">Customer Satisfaction</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-1">
+          Oakwood Customer Reviews
+        </h2>
+        <p class="text-stone-600 mt-2 text-sm sm:text-base">
+          Read real reviews left by homeowners across Cromer, Sheringham, and North Norfolk.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-stone-50 p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4 text-sm">
+              ★★★★★
+            </div>
+            <p class="text-stone-700 italic text-sm leading-relaxed mb-6">
+              "They have been superb from start to finish, organising every aspect of the whole project. I would always recommend them and will be using them again for any future work."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-800 text-white font-bold flex items-center justify-center text-sm">
+              LC
+            </div>
+            <div>
+              <h4 class="font-bold text-stone-900 text-sm">L Coldham</h4>
+              <p class="text-xs text-stone-500">Google Verified Review &bull; North Norfolk</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-stone-50 p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4 text-sm">
+              ★★★★★
+            </div>
+            <p class="text-stone-700 italic text-sm leading-relaxed mb-6">
+              "Oakwood have a great team of extremely competent tradesmen. We vacated whilst the work was done and Greg ensured pictures and updates were sent almost daily. I have no hesitation in recommending Oakwood Building Services."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-800 text-white font-bold flex items-center justify-center text-sm">
+              AB
+            </div>
+            <div>
+              <h4 class="font-bold text-stone-900 text-sm">A Butcher</h4>
+              <p class="text-xs text-stone-500">Google Verified Review &bull; Sheringham</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-stone-50 p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4 text-sm">
+              ★★★★★
+            </div>
+            <p class="text-stone-700 italic text-sm leading-relaxed mb-6">
+              "Every member of the team has been great, very personable and always leaving the place tidy. The finish of the work is really first class; we couldn't recommend Greg and his team highly enough."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-200/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-800 text-white font-bold flex items-center justify-center text-sm">
+              TB
+            </div>
+            <div>
+              <h4 class="font-bold text-stone-900 text-sm">T Bates</h4>
+              <p class="text-xs text-stone-500">Google Verified Review &bull; Cromer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-stone-900 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Contact Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-amber-500 font-semibold uppercase tracking-wider text-xs">Let's Talk</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            Let's Discuss Your Next Project
+          </h2>
+          <p class="text-stone-300 text-base leading-relaxed">
+            Complete the form, or call us directly to set up your free in-home consultation. We'll examine your plans, discuss timings, and prepare a detailed written quote.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <a href="tel:07767234921" class="flex items-center gap-4 p-4 rounded-xl bg-stone-800/80 border border-stone-700 hover:border-amber-500 transition group">
+              <div class="w-12 h-12 rounded-lg bg-amber-600/20 text-amber-500 flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-stone-400">Speak With Our Head Builder</p>
+                <p class="text-lg font-bold text-white">07767 234 921</p>
+              </div>
+            </a>
+
+            <a href="mailto:oakwoodbs11@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-stone-800/80 border border-stone-700 hover:border-amber-500 transition group">
+              <div class="w-12 h-12 rounded-lg bg-amber-600/20 text-amber-500 flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-white transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-stone-400">Direct Email Enquiries</p>
+                <p class="text-base font-bold text-white">oakwoodbs11@gmail.com</p>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-stone-800/80 border border-stone-700">
+              <div class="w-12 h-12 rounded-lg bg-amber-600/20 text-amber-500 flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-stone-400">Coverage Region</p>
+                <p class="text-sm font-semibold text-white">Cromer, Sheringham, Holt, Aylsham & surrounding North Norfolk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form Card -->
+        <div class="lg:col-span-7 bg-stone-800/90 backdrop-blur p-8 rounded-2xl border border-stone-700 shadow-2xl">
+          <h3 class="text-xl font-bold text-white mb-2">Request A Free Consultation</h3>
+          <p class="text-xs text-stone-400 mb-6">No pressure, no obligation. We usually reply within 24 hours.</p>
+
+          <form id="consultation-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-stone-300 mb-1">First Name *</label>
+                <input type="text" required placeholder="e.g. John" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-stone-300 mb-1">Last Name *</label>
+                <input type="text" required placeholder="e.g. Smith" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-stone-300 mb-1">Email Address *</label>
+                <input type="email" required placeholder="john@example.co.uk" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-stone-300 mb-1">Phone Number *</label>
+                <input type="tel" required placeholder="07123 456789" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-stone-300 mb-1">Town or Postcode in North Norfolk</label>
+              <input type="text" placeholder="e.g. Holt, NR25" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-stone-300 mb-1">Type of Work</label>
+              <select class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+                <option value="extension">Extension / New Addition</option>
+                <option value="renovation">Full Renovation / Barn Conversion</option>
+                <option value="kitchen">Kitchen Fitting & Redesign</option>
+                <option value="bathroom">Bathroom / Wetroom</option>
+                <option value="pointing">Brick & Flint Pointing</option>
+                <option value="roofing">Roofing & Chimney Works</option>
+                <option value="other">Other Building Service</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-stone-300 mb-1">Tell Us About Your Project</label>
+              <textarea rows="4" required placeholder="Brief outline of dimensions, ideas, or existing architectural drawings..." class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-amber-500 transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-amber-700 hover:bg-amber-600 text-white font-semibold text-sm rounded-lg transition duration-200 shadow-md">
+              Send Enquiry & Request Consultation
+            </button>
+
+            <!-- Friendly inline confirmation message container (No alert() used) -->
+            <div id="form-feedback" class="hidden p-3.5 rounded-lg bg-emerald-950/80 border border-emerald-500 text-emerald-200 text-xs">
+              Thank you! Your enquiry has been received. Greg and the Oakwood team will be in touch shortly to confirm your consultation.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 bg-stone-950 border-t border-stone-800 text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center text-xs font-medium uppercase tracking-wider">
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-amber-600"></div>
+          <span>Gas Safe Registered Engineers</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-amber-600"></div>
+          <span>FENSA Registered Double Glazing</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-amber-600"></div>
+          <span>Qualified Damp Proofing & Timber Treatment</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-amber-600"></div>
+          <span>Public Liability Insured</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black text-stone-400 py-12 text-sm border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded bg-amber-700 text-white flex items-center justify-center font-bold text-sm">
+            O
+          </div>
+          <div>
+            <p class="font-bold text-white text-base leading-tight">Oakwood Building Services (Norfolk) Ltd</p>
+            <p class="text-xs text-stone-500">Quality Craftsmanship across North Norfolk</p>
+          </div>
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-6 text-xs text-stone-400">
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#services" class="hover:text-white transition">Services</a>
+          <a href="#before-after" class="hover:text-white transition">Before & After</a>
+          <a href="#projects" class="hover:text-white transition">Projects</a>
+          <a href="#reviews" class="hover:text-white transition">Customer Reviews</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </nav>
+
+        <p class="text-xs text-stone-600 text-center md:text-right">
+          &copy; 2026 Oakwood Building Services Norfolk. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Mobile Menu Toggle Logic
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when a link is clicked
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // 2. Interactive Before & After Slider Logic
+    const container = document.getElementById('comparison-container');
+    const beforeClip = document.getElementById('before-clip');
+    const sliderBar = document.getElementById('slider-bar');
+    const beforeImage = document.getElementById('before-image');
+
+    let isSliding = false;
+
+    function setSliderPosition(x) {
+      if (!container || !beforeClip || !sliderBar) return;
+      const rect = container.getBoundingClientRect();
+      let pos = (x - rect.left) / rect.width;
+
+      // Bound between 5% and 95%
+      if (pos < 0.05) pos = 0.05;
+      if (pos > 0.95) pos = 0.95;
+
+      const percentage = pos * 100;
+      beforeClip.style.width = percentage + '%';
+      sliderBar.style.left = percentage + '%';
+      
+      // Match image aspect width so it doesn't compress
+      if (beforeImage) {
+        beforeImage.style.width = rect.width + 'px';
+      }
+    }
+
+    // Window resize adjustment
+    function updateDimensions() {
+      if (container && beforeImage) {
+        beforeImage.style.width = container.offsetWidth + 'px';
+      }
+    }
+    window.addEventListener('resize', updateDimensions);
+    updateDimensions();
+
+    if (container) {
+      // Mouse Events
+      container.addEventListener('mousedown', (e) => {
+        isSliding = true;
+        setSliderPosition(e.clientX);
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (!isSliding) return;
+        setSliderPosition(e.clientX);
+      });
+      window.addEventListener('mouseup', () => {
+        isSliding = false;
+      });
+
+      // Touch Events
+      container.addEventListener('touchstart', (e) => {
+        isSliding = true;
+        if (e.touches[0]) setSliderPosition(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchmove', (e) => {
+        if (!isSliding) return;
+        if (e.touches[0]) setSliderPosition(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchend', () => {
+        isSliding = false;
+      });
+    }
+
+    // 3. Mock Enquiry Form Submission (No alert())
+    const form = document.getElementById('consultation-form');
+    const feedback = document.getElementById('form-feedback');
+
+    if (form && feedback) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        feedback.classList.remove('hidden');
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
