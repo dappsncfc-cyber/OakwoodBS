@@ -538,44 +538,75 @@
     </div>
   </section>
 
-  <section id="before-after" class="py-20 bg-stone-100 border-y border-stone-200">
+    <section id="before-after" class="py-20 bg-stone-100 border-y border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="text-center max-w-2xl mx-auto mb-10">
         <span class="text-gold-600 font-semibold uppercase tracking-wider text-xs">Transformations</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-2">
           Before & After Showcase
         </h2>
         <p class="text-stone-600 mt-3 text-sm sm:text-base">
-          Drag the slider below to see how our team transforms dated properties and overgrown plots into contemporary living spaces.
+          Explore 6 of our major property transformations across North Norfolk. Drag the slider on each project to compare before and after stages.
         </p>
       </div>
 
       <!-- Comparison Container -->
-      <div class="max-w-4xl mx-auto bg-white p-3 rounded-2xl shadow-xl border border-stone-200">
-        <div id="comparison-container" class="relative w-full h-[360px] sm:h-[480px] rounded-xl overflow-hidden select-none cursor-ew-resize">
+      <div class="max-w-4xl mx-auto bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-stone-200">
+
+        <!-- Top Control Bar with Example Selector / Carousel Navigation -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-3 mb-3 border-b border-stone-100">
+          <div class="flex items-center gap-2">
+            <span id="ba-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-gold-100 text-gold-800 border border-gold-200">
+              Project 1 of 6
+            </span>
+            <span id="ba-tag" class="text-xs font-medium text-stone-500 uppercase tracking-wider hidden sm:inline-block">
+              Hindolveston Extension
+            </span>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="flex items-center gap-2">
+            <button id="ba-prev-btn" type="button" aria-label="Previous Example" class="p-2 rounded-lg bg-stone-100 hover:bg-navy-900 hover:text-white text-stone-700 transition flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+
+            <!-- Dots Indicator -->
+            <div id="ba-dots" class="flex items-center gap-1.5 px-2">
+              <!-- Rendered via JS -->
+            </div>
+
+            <button id="ba-next-btn" type="button" aria-label="Next Example" class="p-2 rounded-lg bg-stone-100 hover:bg-navy-900 hover:text-white text-stone-700 transition flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Image Comparison Area -->
+        <div id="comparison-container" class="relative w-full h-[360px] sm:h-[480px] rounded-xl overflow-hidden select-none cursor-ew-resize bg-stone-900">
           <!-- After Image (Background) -->
           <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" 
-            alt="After Renovation & Extension" 
+            id="after-image"
+            src="afterhindolveston.jpg"
+            alt="After - Hindolveston Extension"
             class="absolute inset-0 w-full h-full object-cover"
             onerror="this.onerror=null; this.src='https://placehold.co/1200x800/153460/fff?text=After+Renovation';"
           />
-          <span class="absolute top-4 right-4 bg-navy-900/90 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10">
-            After: Finished Project
+          <span class="absolute top-4 right-4 bg-navy-900/90 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10 shadow">
+            After: Completed
           </span>
 
           <!-- Before Image (Clipped Foreground) -->
-          <div id="before-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white">
+          <div id="before-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80" 
-              alt="Before Renovation & Extension" 
+              id="before-image"
+              src="beforehindolveston.jpg"
+              alt="Before - Hindolveston Extension"
               class="absolute inset-0 w-full h-full object-cover max-w-none"
               style="width: 100%; height: 100%; object-fit: cover;"
-              id="before-image"
               onerror="this.onerror=null; this.src='https://placehold.co/1200x800/555/fff?text=Before+Renovation';"
             />
-            <span class="absolute top-4 left-4 bg-gold-600/95 backdrop-blur text-navy-950 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10">
-              Before Construction
+            <span class="absolute top-4 left-4 bg-gold-600/95 backdrop-blur text-navy-950 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10 shadow">
+              Before Work
             </span>
           </div>
 
@@ -589,13 +620,29 @@
           </div>
         </div>
 
-        <!-- Slider project caption -->
-        <div class="flex flex-col sm:flex-row justify-between items-center px-4 py-4 mt-2 gap-3 text-sm text-stone-600">
-          <div>
-            <strong class="text-navy-900">Norfolk Barn Conversion & Glazed Extension</strong>
-            <p class="text-xs text-stone-500">Stripped back to core timber frame, damp treated, and rebuilt with full insulation and bifold system.</p>
+        <!-- Project Info & Navigation Thumbnails -->
+        <div class="mt-4 px-2">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pb-4 border-b border-stone-100">
+            <div>
+              <h3 id="ba-title" class="text-xl font-bold text-navy-900">Hindolveston Extension</h3>
+              <p id="ba-desc" class="text-stone-600 text-sm mt-1 leading-relaxed">
+                Hindolveston was a design by Leon Morris of a 2 story rear extension with a orangey and full renovation of the main house. Undertaken by Oakwood Building Services, North Norfolk.
+              </p>
+            </div>
+            <span class="text-xs font-semibold px-3 py-1.5 bg-stone-100 rounded-lg text-stone-600 whitespace-nowrap self-start sm:self-center flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-gold-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+              Drag slider left/right
+            </span>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 bg-stone-100 rounded text-stone-700">Drag or swipe slider</span>
+
+          <!-- 6 Thumbnail Selector Tabs -->
+          <div class="pt-4">
+            <p class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Select Project Example:</p>
+            <div id="ba-thumbnails" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -1705,11 +1752,72 @@
       });
     }
 
-    // 2. Interactive Before & After Slider Logic
+        // 2. Interactive Before & After Slider Logic with Multi-Example Support (6 Projects)
+    const beforeAfterData = [
+      {
+        id: 1,
+        title: "Hindolveston Extension",
+        tag: "Two-Story Extension & Orangery",
+        beforeImg: "beforehindolveston.jpg",
+        afterImg: "afterhindolveston.jpg",
+        description: "Hindolveston was a design by Leon Morris of a 2 story rear extension with a orangey and full renovation of the main house. Undertaken by Oakwood Building Services, North Norfolk."
+      },
+      {
+        id: 2,
+        title: "Coastal Barn Conversion",
+        tag: "Cley-next-the-Sea",
+        beforeImg: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
+        afterImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+        description: "Transformation of a derelict agricultural barn into a luxury 4-bedroom Norfolk residence with bespoke oak framing, expansive glazing, and traditional flint repointing."
+      },
+      {
+        id: 3,
+        title: "Sheringham Period Villa Renovation",
+        tag: "Sheringham",
+        beforeImg: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+        afterImg: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+        description: "Comprehensive structural overhaul including timber frame repair, damp proofing, contemporary open-plan kitchen integration, and vaulted ceiling skylights."
+      },
+      {
+        id: 4,
+        title: "Holt Architectural Kitchen & Dining Extension",
+        tag: "Holt",
+        beforeImg: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80",
+        afterImg: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+        description: "Modern single-storey rear extension with full-height aluminium bifolding doors, polished concrete floor, and structural glass roof lantern."
+      },
+      {
+        id: 5,
+        title: "Blakeney Cottage Restoration & Flintwork",
+        tag: "Blakeney",
+        beforeImg: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
+        afterImg: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+        description: "Sensitive restoration of a heritage coastal cottage using lime mortar pointing, handmade Norfolk pantiles, and internal lime plastering."
+      },
+      {
+        id: 6,
+        title: "Aylsham Garage Conversion & Garden Studio",
+        tag: "Aylsham",
+        beforeImg: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1600&q=80",
+        afterImg: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=80",
+        description: "Conversion of an underused double garage into a fully insulated, year-round annex and garden office featuring larch cladding and underfloor heating."
+      }
+    ];
+
+    let currentBAIndex = 0;
     const container = document.getElementById('comparison-container');
     const beforeClip = document.getElementById('before-clip');
     const sliderBar = document.getElementById('slider-bar');
     const beforeImage = document.getElementById('before-image');
+    const afterImage = document.getElementById('after-image');
+    const baBadge = document.getElementById('ba-badge');
+    const baTag = document.getElementById('ba-tag');
+    const baTitle = document.getElementById('ba-title');
+    const baDesc = document.getElementById('ba-desc');
+    const baPrevBtn = document.getElementById('ba-prev-btn');
+    const baNextBtn = document.getElementById('ba-next-btn');
+    const baDots = document.getElementById('ba-dots');
+    const baThumbnails = document.getElementById('ba-thumbnails');
 
     let isSliding = false;
 
@@ -1718,7 +1826,6 @@
       const rect = container.getBoundingClientRect();
       let pos = (x - rect.left) / rect.width;
 
-      // Bound between 5% and 95%
       if (pos < 0.05) pos = 0.05;
       if (pos > 0.95) pos = 0.95;
 
@@ -1726,23 +1833,95 @@
       beforeClip.style.width = percentage + '%';
       sliderBar.style.left = percentage + '%';
       
-      // Match image aspect width so it doesn't compress
       if (beforeImage) {
         beforeImage.style.width = rect.width + 'px';
       }
     }
 
-    // Window resize adjustment
     function updateDimensions() {
       if (container && beforeImage) {
         beforeImage.style.width = container.offsetWidth + 'px';
       }
     }
     window.addEventListener('resize', updateDimensions);
-    updateDimensions();
+
+    function loadBAExample(index) {
+      if (index < 0) index = beforeAfterData.length - 1;
+      if (index >= beforeAfterData.length) index = 0;
+      currentBAIndex = index;
+
+      const item = beforeAfterData[currentBAIndex];
+      if (!item) return;
+
+      if (beforeImage) {
+        beforeImage.src = item.beforeImg;
+        beforeImage.alt = "Before - " + item.title;
+      }
+      if (afterImage) {
+        afterImage.src = item.afterImg;
+        afterImage.alt = "After - " + item.title;
+      }
+      if (baBadge) baBadge.textContent = `Project ${currentBAIndex + 1} of ${beforeAfterData.length}`;
+      if (baTag) baTag.textContent = item.tag || item.title;
+      if (baTitle) baTitle.textContent = item.title;
+      if (baDesc) baDesc.textContent = item.description;
+
+      if (beforeClip && sliderBar) {
+        beforeClip.style.width = '50%';
+        sliderBar.style.left = '50%';
+      }
+      updateDimensions();
+      renderBADots();
+      renderBAThumbnails();
+    }
+
+    function renderBADots() {
+      if (!baDots) return;
+      baDots.innerHTML = '';
+      beforeAfterData.forEach((item, idx) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.ariaLabel = `Go to project ${idx + 1}`;
+        dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === currentBAIndex ? 'bg-gold-500 w-6' : 'bg-stone-300 hover:bg-stone-400'}`;
+        dot.addEventListener('click', () => loadBAExample(idx));
+        baDots.appendChild(dot);
+      });
+    }
+
+    function renderBAThumbnails() {
+      if (!baThumbnails) return;
+      baThumbnails.innerHTML = '';
+      beforeAfterData.forEach((item, idx) => {
+        const isActive = idx === currentBAIndex;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `group text-left p-2 rounded-lg border transition duration-200 flex flex-col items-center gap-1.5 ${
+          isActive
+            ? 'bg-navy-900 border-navy-900 text-white shadow-md ring-2 ring-gold-500/50'
+            : 'bg-stone-50 border-stone-200 hover:border-gold-500 text-stone-700 hover:bg-white'
+        }`;
+
+        btn.innerHTML = `
+          <div class="relative w-full h-12 rounded overflow-hidden bg-stone-200">
+            <img src="${item.afterImg}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition" onerror="this.onerror=null; this.src='https://placehold.co/200x120/153460/fff?text=Project+${idx+1}';" />
+            <span class="absolute bottom-0.5 right-0.5 text-[9px] font-bold px-1 py-0.2 ${isActive ? 'bg-gold-500 text-navy-950' : 'bg-navy-900/80 text-white'} rounded">#${idx+1}</span>
+          </div>
+          <span class="text-[11px] font-semibold truncate w-full text-center ${isActive ? 'text-gold-400' : 'text-stone-700'}">${item.title}</span>
+        `;
+
+        btn.addEventListener('click', () => loadBAExample(idx));
+        baThumbnails.appendChild(btn);
+      });
+    }
+
+    if (baPrevBtn) {
+      baPrevBtn.addEventListener('click', () => loadBAExample(currentBAIndex - 1));
+    }
+    if (baNextBtn) {
+      baNextBtn.addEventListener('click', () => loadBAExample(currentBAIndex + 1));
+    }
 
     if (container) {
-      // Mouse Events
       container.addEventListener('mousedown', (e) => {
         isSliding = true;
         setSliderPosition(e.clientX);
@@ -1755,7 +1934,6 @@
         isSliding = false;
       });
 
-      // Touch Events
       container.addEventListener('touchstart', (e) => {
         isSliding = true;
         if (e.touches[0]) setSliderPosition(e.touches[0].clientX);
@@ -1768,6 +1946,8 @@
         isSliding = false;
       });
     }
+
+    loadBAExample(0);
 
     // 3. Services Data & Glassmorphic Modal with Carousel Logic
     const servicesData = {
