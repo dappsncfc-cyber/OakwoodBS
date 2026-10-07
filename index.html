@@ -582,16 +582,16 @@
         </div>
 
         <!-- Image Comparison Area -->
-        <div id="comparison-container" class="relative w-full h-[360px] sm:h-[480px] rounded-xl overflow-hidden select-none cursor-ew-resize bg-stone-900">
+        <div id="comparison-container" class="relative w-full h-[220px] xs:h-[280px] sm:h-[480px] rounded-xl overflow-hidden select-none cursor-ew-resize bg-stone-900 flex items-center justify-center">
           <!-- After Image (Background) -->
           <img 
             id="after-image"
             src="afterhindolveston.jpg"
             alt="After - Hindolveston Extension"
-            class="absolute inset-0 w-full h-full object-cover"
+            class="absolute inset-0 w-full h-full object-contain sm:object-cover"
             onerror="this.onerror=null; this.src='https://placehold.co/1200x800/153460/fff?text=After+Renovation';"
           />
-          <span class="absolute top-4 right-4 bg-navy-900/90 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10 shadow">
+          <span class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-navy-900/90 backdrop-blur text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full z-10 shadow">
             After: Completed
           </span>
 
@@ -601,11 +601,11 @@
               id="before-image"
               src="beforehindolveston.jpg"
               alt="Before - Hindolveston Extension"
-              class="absolute inset-0 w-full h-full object-cover max-w-none"
-              style="width: 100%; height: 100%; object-fit: cover;"
+              class="absolute inset-0 w-full h-full object-contain sm:object-cover max-w-none"
+              style="width: 100%; height: 100%; object-fit: contain;"
               onerror="this.onerror=null; this.src='https://placehold.co/1200x800/555/fff?text=Before+Renovation';"
             />
-            <span class="absolute top-4 left-4 bg-gold-600/95 backdrop-blur text-navy-950 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full z-10 shadow">
+            <span class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-gold-600/95 backdrop-blur text-navy-950 text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full z-10 shadow">
               Before Work
             </span>
           </div>
@@ -1788,11 +1788,11 @@
       },
       {
         id: 5,
-        title: "Blakeney Cottage Restoration & Flintwork",
-        tag: "Blakeney",
-        beforeImg: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80",
-        afterImg: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
-        description: "Sensitive restoration of a heritage coastal cottage using lime mortar pointing, handmade Norfolk pantiles, and internal lime plastering."
+        title: "THE CONSTANTIA - EAST RUNTON",
+        tag: "East Runton",
+        beforeImg: "consbefore.jpg",
+        afterImg: "consafter.jpg",
+        description: "Conversion of this former restaurant into eight luxury apartments"
       },
       {
         id: 6,
