@@ -215,6 +215,10 @@
   }
   </script>
   
+  <!-- Leaflet.js Map Library -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -1219,99 +1223,40 @@
     </div>
   </section>
 
-  <section id="projects" class="py-20 bg-navy-950 text-white">
+  <section id="projects" class="py-20 bg-stone-50 border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <span class="text-gold-400 font-semibold uppercase tracking-wider text-xs">Portfolio</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1 text-white">
-            Recent Projects in North Norfolk
-          </h2>
-          <p class="text-stone-300 mt-2 text-sm sm:text-base max-w-xl">
-            Take a look at some of our completed work across Hindolveston, Cromer, Sheringham, and Holt.
-          </p>
-        </div>
+
+      <!-- 1. Header & Context -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-gold-600 font-semibold uppercase tracking-wider text-xs">Our North Norfolk Footprint</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-1">
+          Completed Building Projects Across North Norfolk
+        </h2>
+        <p class="text-stone-600 mt-3 text-sm sm:text-base leading-relaxed">
+          Explore our recent extensions, renovations, and conversions by location. Tap a town filter or click a map marker to view completed works.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Project 1: Hindolveston Extension -->
-        <article class="bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 group">
-          <div class="h-64 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
-              alt="Hindolveston Extension" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=Hindolveston+Project';"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
-            <span class="absolute bottom-4 left-4 bg-gold-600 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              Hindolveston
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Hindolveston Extension</h3>
-            <p class="text-stone-300 text-sm leading-relaxed mb-4">
-              Large single-storey rear kitchen/diner extension featuring aluminium bifold doors, roof lanterns, and underfloor heating throughout.
-            </p>
-            <div class="pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-stone-400">
-              <span>Completed: 14 Weeks</span>
-              <span class="text-gold-400 font-medium">Full Project Management</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2: The Rise, Sheringham -->
-        <article class="bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 group">
-          <div class="h-64 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" 
-              alt="The Rise, Sheringham Renovation" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=Sheringham+Project';"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
-            <span class="absolute bottom-4 left-4 bg-gold-600 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              Sheringham
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">The Rise, Sheringham</h3>
-            <p class="text-stone-300 text-sm leading-relaxed mb-4">
-              Full interior renovation including structural wall removal to establish open-plan living, newly fitted luxury kitchen, and bespoke bathrooms.
-            </p>
-            <div class="pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-stone-400">
-              <span>Completed: 10 Weeks</span>
-              <span class="text-gold-400 font-medium">Turnkey Finish</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3: Norwich Road, Cromer -->
-        <article class="bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 group">
-          <div class="h-64 overflow-hidden relative">
-            <img 
-              src="norwichroadafter.jpg"
-              alt="Norwich Road, Cromer Project" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=Cromer+Project';"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
-            <span class="absolute bottom-4 left-4 bg-gold-600 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              Cromer
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Norwich Road, Cromer</h3>
-            <p class="text-stone-300 text-sm leading-relaxed mb-4">
-              Full conversion plus the addition of an extension to a property carried out by Oakwood Building Services on Norwich Road in Cromer
-            </p>
-            <div class="pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-stone-400">
-              <span>Completed: 12 Weeks</span>
-              <span class="text-gold-400 font-medium">Full Conversion & Extension</span>
-            </div>
-          </div>
-        </article>
+      <!-- 2. Town Filter Bar (Pills) -->
+      <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-8" id="town-filters">
+        <button type="button" data-town="all" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-navy-900 text-white border-navy-900 shadow-sm">All Projects</button>
+        <button type="button" data-town="Cromer" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">Cromer</button>
+        <button type="button" data-town="Sheringham" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">Sheringham</button>
+        <button type="button" data-town="Holt" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">Holt</button>
+        <button type="button" data-town="Aylsham" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">Aylsham</button>
+        <button type="button" data-town="North Walsham" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">North Walsham</button>
+        <button type="button" data-town="Hindolveston" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">Hindolveston</button>
+        <button type="button" data-town="East Runton" class="town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm">East Runton</button>
       </div>
+
+      <!-- 3. Interactive Map Container -->
+      <div id="project-map" class="h-[380px] sm:h-[460px] lg:h-[520px] w-full rounded-2xl overflow-hidden border border-stone-200 shadow-xl relative z-10"></div>
+
+      <!-- 6. Responsive Card Grid -->
+      <div id="project-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
     </div>
   </section>
 
@@ -2778,6 +2723,260 @@ ${plans}
           contactSection.scrollIntoView({ behavior: 'smooth' });
         }
       });
+    }
+
+    // 5. Interactive Regional Project Map & Showcase (Leaflet.js)
+    const oakwoodProjects = [
+      {
+        id: "hindolveston-ext",
+        title: "Hindolveston Extension",
+        tag: "Two-Storey Extension & Orangery",
+        town: "Hindolveston",
+        desc: "Two-storey rear extension with orangery and full house renovation.",
+        image: "afterhindolveston.jpg",
+        coords: [52.8333, 1.0500],
+        duration: "14 Weeks",
+        management: "Full Project Management"
+      },
+      {
+        id: "sheringham-rise",
+        title: "The Rise",
+        tag: "Two-Storey Extension & Renovation",
+        town: "Sheringham",
+        desc: "Empty 3-bed detached home extended to 4 bedrooms with full internal finish and landscaping.",
+        image: "riseafter.jpg",
+        coords: [52.9431, 1.2104],
+        duration: "12 Weeks",
+        management: "Turnkey Management"
+      },
+      {
+        id: "cromer-norwich-rd",
+        title: "Norwich Road",
+        tag: "Conversion & Extension",
+        town: "Cromer",
+        desc: "Full conversion plus addition of an extension to a residential property.",
+        image: "norwichroadafter.jpg",
+        coords: [52.9312, 1.2989],
+        duration: "12 Weeks",
+        management: "Conversion & Extension"
+      },
+      {
+        id: "cromer-roughton-rd",
+        title: "Roughton Road",
+        tag: "Bungalow Remodel",
+        town: "Cromer",
+        desc: "1950s bungalow transformation creating light, open interiors and high kerb appeal.",
+        image: "rrafter.jpg",
+        coords: [52.9230, 1.2940],
+        duration: "10 Weeks",
+        management: "Full Remodel"
+      },
+      {
+        id: "east-runton-constantia",
+        title: "The Constantia",
+        tag: "Apartment Conversion",
+        town: "East Runton",
+        desc: "Conversion of former restaurant into eight luxury residential apartments.",
+        image: "consafter.jpg",
+        coords: [52.9360, 1.2630],
+        duration: "16 Weeks",
+        management: "Luxury Conversion"
+      },
+      {
+        id: "cromer-hardwood-knowl",
+        title: "Hardwood Knowl",
+        tag: "Landscaping",
+        town: "Cromer",
+        desc: "Landscaping transformation of wasteland into a clean, functional space.",
+        image: "hkafter.jpg",
+        coords: [52.9280, 1.3020],
+        duration: "4 Weeks",
+        management: "Groundworks & Paving"
+      }
+    ];
+
+    const townCenterCoords = {
+      all: { coords: [52.9036, 1.2000], zoom: 10 },
+      Cromer: { coords: [52.9274, 1.2983], zoom: 13 },
+      Sheringham: { coords: [52.9431, 1.2104], zoom: 13 },
+      Holt: { coords: [52.9056, 1.0883], zoom: 13 },
+      Aylsham: { coords: [52.7961, 1.2522], zoom: 13 },
+      "North Walsham": { coords: [52.8258, 1.3857], zoom: 13 },
+      Hindolveston: { coords: [52.8333, 1.0500], zoom: 13 },
+      "East Runton": { coords: [52.9360, 1.2630], zoom: 13 }
+    };
+
+    let projectMap = null;
+    const projectMarkers = {};
+
+    function createOakwoodPinIcon() {
+      return L.divIcon({
+        className: 'custom-oakwood-pin',
+        html: `
+          <div class="relative group cursor-pointer">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1b3a62] border-2 border-[#c5a854] shadow-lg flex items-center justify-center text-white transform hover:scale-110 transition duration-200">
+              <svg class="w-5 h-5 text-[#c5a854]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+              </svg>
+            </div>
+            <div class="w-2 h-2 bg-[#c5a854] rotate-45 mx-auto -mt-1 shadow-sm"></div>
+          </div>
+        `,
+        iconSize: [40, 44],
+        iconAnchor: [20, 44],
+        popupAnchor: [0, -42]
+      });
+    }
+
+    function initProjectMap() {
+      const mapContainer = document.getElementById('project-map');
+      if (!mapContainer || typeof L === 'undefined') return;
+
+      // Initialise Leaflet Map
+      projectMap = L.map('project-map', {
+        scrollWheelZoom: false
+      }).setView([52.9036, 1.2000], 10);
+
+      // Light CartoDB tile layer with muted aesthetic matching site palette
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(projectMap);
+
+      // Plot Custom Markers
+      oakwoodProjects.forEach(proj => {
+        const marker = L.marker(proj.coords, {
+          icon: createOakwoodPinIcon(),
+          title: proj.title
+        }).addTo(projectMap);
+
+        const popupHTML = `
+          <div class="p-1 max-w-[220px]">
+            <img src="${proj.image}" alt="${proj.title}" class="w-full h-24 object-cover rounded-lg mb-2" onerror="this.onerror=null; this.src='https://placehold.co/400x250/153460/fff?text=${encodeURIComponent(proj.title)}';" />
+            <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-navy-100 text-navy-900 mb-1">${proj.town}</span>
+            <h4 class="font-bold text-navy-900 text-sm leading-tight">${proj.title}</h4>
+            <p class="text-stone-600 text-xs mt-1 leading-snug">${proj.desc}</p>
+            <button type="button" onclick="scrollToProjectCard('${proj.id}')" class="mt-3 w-full py-1.5 px-3 bg-navy-900 text-white font-semibold text-xs rounded-lg hover:bg-gold-600 hover:text-navy-950 transition duration-200 text-center block">
+              View Case Study &rarr;
+            </button>
+          </div>
+        `;
+
+        marker.bindPopup(popupHTML, {
+          className: 'oakwood-leaflet-popup'
+        });
+
+        projectMarkers[proj.id] = marker;
+      });
+
+      renderProjectCards(oakwoodProjects);
+      setupTownFilterListeners();
+    }
+
+    function renderProjectCards(projectsToRender) {
+      const cardsGrid = document.getElementById('project-cards-grid');
+      if (!cardsGrid) return;
+
+      if (projectsToRender.length === 0) {
+        cardsGrid.innerHTML = `
+          <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-stone-200 p-8 shadow-sm">
+            <svg class="w-12 h-12 text-gold-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <h3 class="text-lg font-bold text-navy-900">Active Service Area</h3>
+            <p class="text-stone-600 text-sm mt-1 max-w-md mx-auto">We regularly complete extensions, conversions, and restorations in this area. Contact us to discuss your upcoming project or view local references!</p>
+            <a href="#contact" class="inline-block mt-4 px-5 py-2.5 bg-navy-900 text-white text-xs font-bold rounded-xl hover:bg-gold-600 hover:text-navy-950 transition">Enquire For This Town</a>
+          </div>
+        `;
+        return;
+      }
+
+      cardsGrid.innerHTML = projectsToRender.map(proj => `
+        <article id="card-${proj.id}" class="project-card-item bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between cursor-pointer group" onclick="focusMapMarker('${proj.id}')">
+          <div>
+            <div class="h-56 overflow-hidden relative bg-stone-200">
+              <img src="${proj.image}" alt="${proj.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=${encodeURIComponent(proj.title)}';" />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                ${proj.town}
+              </span>
+              <span class="absolute top-3 right-3 bg-gold-600 text-navy-950 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
+                ${proj.tag}
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
+                <span>${proj.title}</span>
+                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </h3>
+              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                ${proj.desc}
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
+            <span class="font-medium text-stone-600">${proj.duration}</span>
+            <span class="text-gold-600 font-bold">${proj.management}</span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function setupTownFilterListeners() {
+      const filterBtns = document.querySelectorAll('.town-filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedTown = btn.getAttribute('data-town');
+
+          // Update Pill Styling
+          filterBtns.forEach(b => {
+            b.className = 'town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-white text-stone-700 border-stone-200 hover:border-gold-500 shadow-sm';
+          });
+          btn.className = 'town-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition duration-200 bg-navy-900 text-white border-navy-900 shadow-sm';
+
+          // Fly Map To Target Area
+          if (townCenterCoords[selectedTown] && projectMap) {
+            const target = townCenterCoords[selectedTown];
+            projectMap.flyTo(target.coords, target.zoom, {
+              duration: 1.2
+            });
+          }
+
+          // Filter Cards Grid
+          if (selectedTown === 'all') {
+            renderProjectCards(oakwoodProjects);
+          } else {
+            const filtered = oakwoodProjects.filter(p => p.town.toLowerCase() === selectedTown.toLowerCase());
+            renderProjectCards(filtered);
+          }
+        });
+      });
+    }
+
+    function focusMapMarker(id) {
+      const marker = projectMarkers[id];
+      const proj = oakwoodProjects.find(p => p.id === id);
+      if (marker && proj && projectMap) {
+        projectMap.flyTo(proj.coords, 14, { duration: 1 });
+        marker.openPopup();
+      }
+    }
+
+    function scrollToProjectCard(id) {
+      const card = document.getElementById(`card-${id}`);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.classList.add('ring-2', 'ring-gold-500');
+        setTimeout(() => {
+          card.classList.remove('ring-2', 'ring-gold-500');
+        }, 2000);
+      }
+    }
+
+    // Initialize Map on DOM Content Loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initProjectMap);
+    } else {
+      initProjectMap();
     }
   </script>
 </body>
