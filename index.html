@@ -1219,101 +1219,297 @@
     </div>
   </section>
 
-  <section id="projects" class="py-20 bg-navy-950 text-white">
+  <section id="projects" class="py-20 bg-stone-50 text-stone-900 border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div>
-          <span class="text-gold-400 font-semibold uppercase tracking-wider text-xs">Portfolio</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1 text-white">
-            Recent Projects in North Norfolk
-          </h2>
-          <p class="text-stone-300 mt-2 text-sm sm:text-base max-w-xl">
-            Take a look at some of our completed work across Hindolveston, Cromer, Sheringham, and Holt.
-          </p>
-        </div>
+
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif-heading text-stone-900 tracking-tight">
+          Completed projects across North Norfolk
+        </h2>
+        <p class="text-stone-600 text-base sm:text-lg mt-3">
+          Tap a town on the map to see Oakwood's completed extensions and renovations nearby.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Project 1: Hindolveston Extension -->
-        <article class="bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 group">
-          <div class="h-64 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
-              alt="Hindolveston Extension" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=Hindolveston+Project';"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
-            <span class="absolute bottom-4 left-4 bg-gold-600 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              Hindolveston
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Hindolveston Extension</h3>
-            <p class="text-stone-300 text-sm leading-relaxed mb-4">
-              Large single-storey rear kitchen/diner extension featuring aluminium bifold doors, roof lanterns, and underfloor heating throughout.
-            </p>
-            <div class="pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-stone-400">
-              <span>Completed: 14 Weeks</span>
-              <span class="text-gold-400 font-medium">Full Project Management</span>
-            </div>
-          </div>
-        </article>
+      <!-- Main Map & Project Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-        <!-- Project 2: The Rise, Sheringham -->
-        <article class="bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 group">
-          <div class="h-64 overflow-hidden relative">
-            <img 
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" 
-              alt="The Rise, Sheringham Renovation" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=Sheringham+Project';"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
-            <span class="absolute bottom-4 left-4 bg-gold-600 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              Sheringham
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">The Rise, Sheringham</h3>
-            <p class="text-stone-300 text-sm leading-relaxed mb-4">
-              Full interior renovation including structural wall removal to establish open-plan living, newly fitted luxury kitchen, and bespoke bathrooms.
-            </p>
-            <div class="pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-stone-400">
-              <span>Completed: 10 Weeks</span>
-              <span class="text-gold-400 font-medium">Turnkey Finish</span>
-            </div>
-          </div>
-        </article>
+        <!-- Map Panel (Left Column - 7 Cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-6 shadow-sm border border-stone-200 flex flex-col justify-between">
 
-        <!-- Project 3: Norwich Road, Cromer -->
-        <article class="bg-navy-900 rounded-2xl overflow-hidden border border-navy-800 group">
-          <div class="h-64 overflow-hidden relative">
-            <img 
-              src="norwichroadafter.jpg"
-              alt="Norwich Road, Cromer Project" 
-              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=Cromer+Project';"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent opacity-80"></div>
-            <span class="absolute bottom-4 left-4 bg-gold-600 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          <!-- Outline Map Container -->
+          <div class="relative w-full h-[340px] sm:h-[420px] bg-[#eceae1] rounded-2xl overflow-hidden flex items-center justify-center p-4">
+
+            <!-- Real Outline SVG Map of North Norfolk Coastline -->
+            <svg viewBox="0 0 600 400" class="w-full h-full object-contain filter drop-shadow-sm" xmlns="http://www.w3.org/2000/svg">
+              <!-- Water Background / Coastline Definition -->
+              <path d="M 0,0 L 600,0 L 600,400 L 0,400 Z" fill="#e5ebd8" />
+              <!-- Sea Water overlay -->
+              <path d="M 0,0 L 600,0 L 600,120 Q 520,130 460,135 Q 380,140 320,180 Q 250,220 180,250 Q 120,280 0,320 Z" fill="#e1e8ea" />
+
+              <!-- Land Mass - Real North Norfolk Coastline Arc -->
+              <!-- Coastal arc from Hunstanton/Blakeney through Holt, Sheringham, Cromer, down towards Mundesley & Happisburgh -->
+              <path d="M -20,420 L -20,330 C 50,300 100,275 160,250 C 220,225 280,180 340,165 C 400,150 480,145 540,150 L 620,160 L 620,420 Z" fill="#e3ded0" stroke="#d5cfbe" stroke-width="6" stroke-linejoin="round" />
+
+              <!-- North Sea Text -->
+              <text x="440" y="110" font-family="Inter, sans-serif" font-style="italic" font-size="16" fill="#8d9b9e">North Sea</text>
+
+              <!-- Interactive Town Pins & Labels on SVG Map -->
+              <!-- 1. Sheringham Pin -->
+              <g class="town-pin cursor-pointer group" data-town="Sheringham" data-project-id="rise">
+                <circle cx="285" cy="195" r="14" fill="#2d4239" class="transition group-hover:scale-125 group-hover:fill-[#a3914c]" />
+                <circle cx="285" cy="195" r="5" fill="#ffffff" />
+                <text x="285" y="172" font-family="Inter, sans-serif" font-weight="600" font-size="15" fill="#2b312e" text-anchor="middle">Sheringham</text>
+              </g>
+
+              <!-- 2. Cromer Pin -->
+              <g class="town-pin cursor-pointer group" data-town="Cromer" data-project-id="norwich-road">
+                <circle cx="370" cy="215" r="14" fill="#2d4239" class="transition group-hover:scale-125 group-hover:fill-[#a3914c]" />
+                <circle cx="370" cy="215" r="5" fill="#ffffff" />
+                <text x="370" y="192" font-family="Inter, sans-serif" font-weight="600" font-size="15" fill="#2b312e" text-anchor="middle">Cromer</text>
+              </g>
+
+              <!-- 3. Holt Pin -->
+              <g class="town-pin cursor-pointer group" data-town="Holt" data-project-id="holt-kitchen">
+                <circle cx="210" cy="265" r="14" fill="#2d4239" class="transition group-hover:scale-125 group-hover:fill-[#a3914c]" />
+                <circle cx="210" cy="265" r="5" fill="#ffffff" />
+                <text x="210" y="242" font-family="Inter, sans-serif" font-weight="600" font-size="15" fill="#2b312e" text-anchor="middle">Holt</text>
+              </g>
+
+              <!-- 4. North Walsham Pin -->
+              <g class="town-pin cursor-pointer group" data-town="North Walsham" data-project-id="hindolveston">
+                <circle cx="310" cy="300" r="14" fill="#2d4239" class="transition group-hover:scale-125 group-hover:fill-[#a3914c]" />
+                <circle cx="310" cy="300" r="5" fill="#ffffff" />
+                <text x="310" y="278" font-family="Inter, sans-serif" font-weight="600" font-size="15" fill="#2b312e" text-anchor="middle">North Walsham</text>
+              </g>
+
+              <!-- 5. Aylsham Pin -->
+              <g class="town-pin cursor-pointer group" data-town="Aylsham">
+                <circle cx="140" cy="315" r="14" fill="#2d4239" class="transition group-hover:scale-125 group-hover:fill-[#a3914c]" />
+                <circle cx="140" cy="315" r="5" fill="#ffffff" />
+                <text x="140" y="292" font-family="Inter, sans-serif" font-weight="600" font-size="15" fill="#2b312e" text-anchor="middle">Aylsham</text>
+              </g>
+
+            </svg>
+          </div>
+
+          <!-- Filter Town Pills (Below Map) -->
+          <div class="mt-4 pt-2 flex flex-wrap items-center gap-2 overflow-x-auto">
+            <button type="button" data-filter="all" class="town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-[#2d4239] text-white shadow-sm transition">
+              All towns
+            </button>
+            <button type="button" data-filter="Cromer" class="town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">
               Cromer
-            </span>
+            </button>
+            <button type="button" data-filter="Sheringham" class="town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">
+              Sheringham
+            </button>
+            <button type="button" data-filter="Holt" class="town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">
+              Holt
+            </button>
+            <button type="button" data-filter="Aylsham" class="town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">
+              Aylsham
+            </button>
+            <button type="button" data-filter="North Walsham" class="town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition">
+              North Walsham
+            </button>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Norwich Road, Cromer</h3>
-            <p class="text-stone-300 text-sm leading-relaxed mb-4">
-              Full conversion plus the addition of an extension to a property carried out by Oakwood Building Services on Norwich Road in Cromer
-            </p>
-            <div class="pt-4 border-t border-navy-800 flex justify-between items-center text-xs text-stone-400">
-              <span>Completed: 12 Weeks</span>
-              <span class="text-gold-400 font-medium">Full Conversion & Extension</span>
+
+        </div>
+
+        <!-- Projects Cards Column (Right Column - 5 Cols) -->
+        <div class="lg:col-span-5 space-y-4">
+
+          <!-- Projects Header Bar -->
+          <div class="flex items-center justify-between px-1 pb-1">
+            <h3 class="text-2xl font-bold font-serif-heading text-stone-900">All projects</h3>
+            <span id="projects-count" class="text-xs font-medium text-stone-500">4 projects</span>
+          </div>
+
+          <!-- Project Card 1: The Rise (Sheringham) -->
+          <div data-project-card="rise" data-town="Sheringham" class="recent-project-card cursor-pointer bg-white rounded-2xl p-3 sm:p-4 border border-stone-200 hover:border-stone-400 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+            <div class="w-24 sm:w-28 h-20 sm:h-22 rounded-xl overflow-hidden shrink-0 bg-stone-100 relative">
+              <img src="riseafter.jpg" alt="The Rise" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-100 text-[#1f382b] text-[10px] font-bold uppercase tracking-wide">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                  EXTENSION
+                </span>
+                <span class="text-xs text-stone-500 font-medium flex items-center gap-1">
+                  <svg class="w-3 h-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                  Sheringham
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-stone-900 group-hover:text-[#2d4239] transition truncate">The Rise</h4>
+              <p class="text-xs text-stone-600 line-clamp-2 mt-0.5 leading-snug">
+                Two-storey rear extension and full renovation — a three-bed home extended to four.
+              </p>
+            </div>
+            <div class="text-stone-400 group-hover:text-stone-700 transition px-1">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </div>
-        </article>
+
+          <!-- Project Card 2: Hindolveston Extension (Near North Walsham) -->
+          <div data-project-card="hindolveston" data-town="North Walsham" class="recent-project-card cursor-pointer bg-white rounded-2xl p-3 sm:p-4 border border-stone-200 hover:border-stone-400 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+            <div class="w-24 sm:w-28 h-20 sm:h-22 rounded-xl overflow-hidden shrink-0 bg-stone-100 relative">
+              <img src="afterhindolveston.jpg" alt="Hindolveston Extension" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-100 text-[#1f382b] text-[10px] font-bold uppercase tracking-wide">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                  EXTENSION
+                </span>
+                <span class="text-xs text-stone-500 font-medium flex items-center gap-1">
+                  <svg class="w-3 h-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                  Near North Walsham
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-stone-900 group-hover:text-[#2d4239] transition truncate">Hindolveston Extension</h4>
+              <p class="text-xs text-stone-600 line-clamp-2 mt-0.5 leading-snug">
+                Substantial two-storey rear extension and renovation of the main house.
+              </p>
+            </div>
+            <div class="text-stone-400 group-hover:text-stone-700 transition px-1">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- Project Card 3: Norwich Road Project / Coastal Renovation (Cromer) -->
+          <div data-project-card="norwich-road" data-town="Cromer" class="recent-project-card cursor-pointer bg-white rounded-2xl p-3 sm:p-4 border border-stone-200 hover:border-stone-400 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+            <div class="w-24 sm:w-28 h-20 sm:h-22 rounded-xl overflow-hidden shrink-0 bg-stone-100 relative">
+              <img src="norwichroadafter.jpg" alt="Coastal Renovation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-100 text-amber-900 text-[10px] font-bold uppercase tracking-wide">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                  RENOVATION
+                </span>
+                <span class="text-xs text-stone-500 font-medium flex items-center gap-1">
+                  <svg class="w-3 h-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                  Cromer
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-stone-900 group-hover:text-[#2d4239] transition truncate">Coastal Renovation</h4>
+              <p class="text-xs text-stone-600 line-clamp-2 mt-0.5 leading-snug">
+                Full internal refurbishment and thermal upgrades for a coastal property on Norwich Road in Cromer.
+              </p>
+            </div>
+            <div class="text-stone-400 group-hover:text-stone-700 transition px-1">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- Project Card 4: Holt Kitchen (Holt) -->
+          <div data-project-card="holt-kitchen" data-town="Holt" class="recent-project-card cursor-pointer bg-white rounded-2xl p-3 sm:p-4 border border-stone-200 hover:border-stone-400 hover:shadow-md transition duration-200 flex items-center gap-4 group">
+            <div class="w-24 sm:w-28 h-20 sm:h-22 rounded-xl overflow-hidden shrink-0 bg-stone-100 relative">
+              <img src="hkafter.jpg" alt="Holt Kitchen" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-100 text-blue-900 text-[10px] font-bold uppercase tracking-wide">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                  KITCHEN
+                </span>
+                <span class="text-xs text-stone-500 font-medium flex items-center gap-1">
+                  <svg class="w-3 h-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                  Holt
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-stone-900 group-hover:text-[#2d4239] transition truncate">Holt Kitchen</h4>
+              <p class="text-xs text-stone-600 line-clamp-2 mt-0.5 leading-snug">
+                Open-plan kitchen knock-through with island and integrated appliances.
+              </p>
+            </div>
+            <div class="text-stone-400 group-hover:text-stone-700 transition px-1">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+        </div>
+
       </div>
+
     </div>
   </section>
+
+  <!-- Interactive Modal Popup for Recent Projects -->
+  <div id="recent-project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 hidden opacity-0 transition-opacity duration-300">
+    <!-- Backdrop Overlay -->
+    <div id="rp-modal-backdrop" class="fixed inset-0 bg-stone-900/70 backdrop-blur-md"></div>
+
+    <!-- Modal Card Container -->
+    <div class="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl border border-stone-200 p-6 sm:p-8 z-10 custom-scrollbar transform scale-95 transition-transform duration-300 text-stone-900">
+
+      <!-- Close Button -->
+      <button id="rp-modal-close" type="button" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 flex items-center justify-center transition focus:outline-none z-20" aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6 pr-10">
+        <div class="flex items-center gap-2 mb-2">
+          <span id="rp-modal-category" class="px-3 py-0.5 rounded bg-emerald-100 text-[#1f382b] text-xs font-bold uppercase tracking-wider">
+            EXTENSION
+          </span>
+          <span id="rp-modal-location" class="text-xs font-medium text-stone-500 flex items-center gap-1">
+            <svg class="w-3.5 h-3.5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            Sheringham
+          </span>
+        </div>
+        <h3 id="rp-modal-title" class="text-2xl sm:text-3xl font-extrabold font-serif-heading text-stone-900">
+          Project Title
+        </h3>
+      </div>
+
+      <!-- Image Carousel Container -->
+      <div class="relative rounded-2xl overflow-hidden bg-stone-900 shadow-inner mb-6 group">
+        <div class="relative h-64 sm:h-80 md:h-96 w-full">
+          <img id="rp-carousel-img" src="" alt="" class="w-full h-full object-cover transition-opacity duration-300" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
+
+          <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4 text-xs">
+            <p id="rp-carousel-caption" class="text-stone-200 font-medium bg-stone-900/80 backdrop-blur px-3 py-1.5 rounded-lg border border-white/10 max-w-[75%] truncate">
+              Caption
+            </p>
+            <span id="rp-carousel-counter" class="text-gold-400 font-bold bg-stone-900/90 backdrop-blur px-3 py-1.5 rounded-lg border border-gold-500/30">
+              1 / 2
+            </span>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="rp-carousel-prev" type="button" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-stone-900/70 hover:bg-gold-500 text-white hover:text-stone-900 transition flex items-center justify-center shadow-lg backdrop-blur focus:outline-none">
+          &#10094;
+        </button>
+        <button id="rp-carousel-next" type="button" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-stone-900/70 hover:bg-gold-500 text-white hover:text-stone-900 transition flex items-center justify-center shadow-lg backdrop-blur focus:outline-none">
+          &#10095;
+        </button>
+      </div>
+
+      <!-- Detailed Description -->
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-stone-400">Project Overview</h4>
+        <p id="rp-modal-desc" class="text-stone-700 text-sm sm:text-base leading-relaxed">
+          Detailed project summary...
+        </p>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="mt-8 pt-6 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-stone-500">Interested in a similar project in your area?</p>
+        <a href="#contact" id="rp-modal-cta" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm transition">
+          Book Free Consultation
+        </a>
+      </div>
+
+    </div>
+  </div>
 
   <section class="py-20 bg-stone-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2734,6 +2930,216 @@
         }
       });
     }
+
+    // 5. Recent Projects Modal & Map Filter Logic
+    const recentProjectsData = {
+      'rise': {
+        title: 'The Rise',
+        category: 'EXTENSION',
+        location: 'Sheringham',
+        badgeBg: 'bg-emerald-100 text-[#1f382b]',
+        description: 'Two-storey rear extension and full renovation carried out by Oakwood Building Services at 11 The Rise, Sheringham. Transformed from an empty three-bed detached property into a spacious, modern four-bedroom home with open-plan kitchen/living area and bespoke landscaping.',
+        gallery: [
+          { url: 'riseafter.jpg', caption: 'The Rise - Completed rear two-storey extension' },
+          { url: 'risebefore.jpg', caption: 'The Rise - Original property before extension' }
+        ]
+      },
+      'hindolveston': {
+        title: 'Hindolveston Extension',
+        category: 'EXTENSION',
+        location: 'Near North Walsham',
+        badgeBg: 'bg-emerald-100 text-[#1f382b]',
+        description: 'Substantial two-storey rear extension and renovation of the main house in Hindolveston, near North Walsham. Designed by Leon Morris, this project included a stunning ground floor orangery, open kitchen-diner, and full interior refurbishment.',
+        gallery: [
+          { url: 'afterhindolveston.jpg', caption: 'Hindolveston - Completed extension and rear orangery' },
+          { url: 'beforehindolveston.jpg', caption: 'Hindolveston - Before work commenced' }
+        ]
+      },
+      'norwich-road': {
+        title: 'Coastal Renovation',
+        category: 'RENOVATION',
+        location: 'Cromer',
+        badgeBg: 'bg-amber-100 text-amber-900',
+        description: 'Full internal refurbishment and thermal upgrades for a coastal property on Norwich Road in Cromer. Included wall reconfiguration, bespoke finishes, modern insulation, and exterior updates executed by Oakwood Building Services.',
+        gallery: [
+          { url: 'norwichroadafter.jpg', caption: 'Norwich Road - Completed coastal renovation and extension' },
+          { url: 'norwichroadbefore.jpg', caption: 'Norwich Road - Original property condition' }
+        ]
+      },
+      'holt-kitchen': {
+        title: 'Holt Kitchen',
+        category: 'KITCHEN',
+        location: 'Holt',
+        badgeBg: 'bg-blue-100 text-blue-900',
+        description: 'Open-plan kitchen knock-through with island and integrated appliances in Holt. Featured bespoke dark navy shaker cabinetry, quartz worktops, feature lighting, and luxury vinyl flooring.',
+        gallery: [
+          { url: 'hkafter.jpg', caption: 'Holt Kitchen - Completed open-plan kitchen with central island' },
+          { url: 'hkbefore.jpg', caption: 'Holt Kitchen - Before knock-through' }
+        ]
+      }
+    };
+
+    let currentRPKey = null;
+    let currentRPImgIndex = 0;
+
+    const rpModal = document.getElementById('recent-project-modal');
+    const rpModalBackdrop = document.getElementById('rp-modal-backdrop');
+    const rpModalClose = document.getElementById('rp-modal-close');
+    const rpModalCategory = document.getElementById('rp-modal-category');
+    const rpModalLocation = document.getElementById('rp-modal-location');
+    const rpModalTitle = document.getElementById('rp-modal-title');
+    const rpModalDesc = document.getElementById('rp-modal-desc');
+
+    const rpCarouselImg = document.getElementById('rp-carousel-img');
+    const rpCarouselCaption = document.getElementById('rp-carousel-caption');
+    const rpCarouselCounter = document.getElementById('rp-carousel-counter');
+    const rpCarouselPrev = document.getElementById('rp-carousel-prev');
+    const rpCarouselNext = document.getElementById('rp-carousel-next');
+
+    function updateRPCarousel() {
+      if (!currentRPKey || !recentProjectsData[currentRPKey]) return;
+      const gallery = recentProjectsData[currentRPKey].gallery;
+      if (!gallery || gallery.length === 0) return;
+
+      if (currentRPImgIndex < 0) currentRPImgIndex = gallery.length - 1;
+      if (currentRPImgIndex >= gallery.length) currentRPImgIndex = 0;
+
+      const item = gallery[currentRPImgIndex];
+      rpCarouselImg.style.opacity = '0.3';
+      setTimeout(() => {
+        rpCarouselImg.src = item.url;
+        rpCarouselImg.alt = item.caption;
+        rpCarouselCaption.textContent = item.caption;
+        rpCarouselCounter.textContent = `${currentRPImgIndex + 1} / ${gallery.length}`;
+        rpCarouselImg.style.opacity = '1';
+      }, 150);
+    }
+
+    function openRPModal(key) {
+      if (!recentProjectsData[key]) return;
+      currentRPKey = key;
+      currentRPImgIndex = 0;
+
+      const p = recentProjectsData[key];
+      rpModalCategory.textContent = p.category;
+      rpModalCategory.className = `px-3 py-0.5 rounded text-xs font-bold uppercase tracking-wider ${p.badgeBg}`;
+      rpModalLocation.innerHTML = `
+        <svg class="w-3.5 h-3.5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        ${p.location}
+      `;
+      rpModalTitle.textContent = p.title;
+      rpModalDesc.textContent = p.description;
+
+      updateRPCarousel();
+
+      rpModal.classList.remove('hidden');
+      setTimeout(() => {
+        rpModal.classList.remove('opacity-0');
+        rpModal.querySelector('.transform').classList.remove('scale-95');
+        rpModal.querySelector('.transform').classList.add('scale-100');
+      }, 10);
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRPModal() {
+      rpModal.classList.add('opacity-0');
+      if (rpModal.querySelector('.transform')) {
+        rpModal.querySelector('.transform').classList.remove('scale-100');
+        rpModal.querySelector('.transform').classList.add('scale-95');
+      }
+      setTimeout(() => {
+        rpModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // Attach click events to project cards
+    document.querySelectorAll('.recent-project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.getAttribute('data-project-card');
+        if (id) openRPModal(id);
+      });
+    });
+
+    // Attach click events to town pins on map
+    document.querySelectorAll('.town-pin').forEach(pin => {
+      pin.addEventListener('click', () => {
+        const projId = pin.getAttribute('data-project-id');
+        const town = pin.getAttribute('data-town');
+        if (projId && recentProjectsData[projId]) {
+          openRPModal(projId);
+        } else if (town) {
+          filterProjectsByTown(town);
+        }
+      });
+    });
+
+    // Town filter buttons logic
+    const filterBtns = document.querySelectorAll('.town-filter-btn');
+    const projectCardsList = document.querySelectorAll('.recent-project-card');
+    const projectsCountEl = document.getElementById('projects-count');
+
+    function filterProjectsByTown(filter) {
+      let count = 0;
+
+      filterBtns.forEach(btn => {
+        const bFilter = btn.getAttribute('data-filter');
+        if (bFilter === filter) {
+          btn.className = 'town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-[#2d4239] text-white shadow-sm transition';
+        } else {
+          btn.className = 'town-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-stone-100 hover:bg-stone-200 text-stone-700 transition';
+        }
+      });
+
+      projectCardsList.forEach(card => {
+        const cardTown = card.getAttribute('data-town');
+        if (filter === 'all' || cardTown === filter) {
+          card.classList.remove('hidden');
+          count++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (projectsCountEl) {
+        projectsCountEl.textContent = `${count} project${count === 1 ? '' : 's'}`;
+      }
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        if (filter) filterProjectsByTown(filter);
+      });
+    });
+
+    // RP Carousel Navigation
+    if (rpCarouselPrev) {
+      rpCarouselPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentRPImgIndex--;
+        updateRPCarousel();
+      });
+    }
+    if (rpCarouselNext) {
+      rpCarouselNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentRPImgIndex++;
+        updateRPCarousel();
+      });
+    }
+
+    if (rpModalClose) rpModalClose.addEventListener('click', closeRPModal);
+    if (rpModalBackdrop) rpModalBackdrop.addEventListener('click', closeRPModal);
+
+    window.addEventListener('keydown', (e) => {
+      if (!rpModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeRPModal();
+        if (e.key === 'ArrowLeft') { currentRPImgIndex--; updateRPCarousel(); }
+        if (e.key === 'ArrowRight') { currentRPImgIndex++; updateRPCarousel(); }
+      }
+    });
   </script>
 </body>
 </html>
