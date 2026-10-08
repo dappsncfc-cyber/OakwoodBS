@@ -1487,7 +1487,7 @@
             Let's Discuss Your Next Project
           </h2>
           <p class="text-stone-300 text-base leading-relaxed">
-            Complete the form, or call us directly to set up your free in-home consultation. We'll examine your plans, discuss timings, and prepare a detailed written quote.
+            Complete our simple 3-step project enquiry form, or call us directly to set up your free in-home consultation across North Norfolk.
           </p>
 
           <div class="space-y-4 pt-4">
@@ -1523,74 +1523,282 @@
           </div>
         </div>
 
-        <!-- Right Form Card -->
-        <div class="lg:col-span-7 bg-navy-900/90 backdrop-blur p-5 sm:p-8 rounded-2xl border border-navy-800 shadow-2xl">
-          <h3 class="text-xl font-bold text-white mb-2">Request A Free Consultation</h3>
-          <p class="text-xs text-stone-400 mb-6">No pressure, no obligation. We usually reply within 24 hours.</p>
+        <!-- Right Form Card: 3-Step Project Enquiry Form -->
+        <div class="lg:col-span-7 bg-white text-stone-900 p-6 sm:p-10 rounded-2xl shadow-2xl border border-stone-200">
 
-          <form id="consultation-form" class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Form Header & Progress Bar -->
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-2xl sm:text-3xl font-bold font-serif-heading text-[#1d2d26] tracking-tight">
+              Start Your Project Enquiry
+            </h3>
+            <span id="step-indicator" class="text-xs sm:text-sm font-medium text-stone-500">
+              Step 1 of 3
+            </span>
+          </div>
+
+          <!-- 3-Segment Progress Bar -->
+          <div class="grid grid-cols-3 gap-2.5 mb-8">
+            <div id="progress-bar-1" class="h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300"></div>
+            <div id="progress-bar-2" class="h-1.5 sm:h-2 rounded-full bg-stone-200 transition-colors duration-300"></div>
+            <div id="progress-bar-3" class="h-1.5 sm:h-2 rounded-full bg-stone-200 transition-colors duration-300"></div>
+          </div>
+
+          <form id="enquiry-form" onsubmit="return false;">
+
+            <!-- STEP 1 CONTAINER -->
+            <div id="enquiry-step-1" class="space-y-7">
+
+              <!-- Section 1: Project Type -->
               <div>
-                <label class="block text-xs font-medium text-stone-300 mb-1">First Name *</label>
-                <input type="text" required placeholder="e.g. John" class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition">
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-3">
+                  WHAT TYPE OF PROJECT ARE YOU PLANNING? <span class="text-red-500">*</span>
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+                  <!-- Extension -->
+                  <div data-project-type="Extension" class="project-card cursor-pointer border-2 border-[#243830] bg-[#f2f5f3] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Extension</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Single or two-storey</p>
+                    </div>
+                  </div>
+
+                  <!-- Renovation -->
+                  <div data-project-type="Renovation" class="project-card cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Renovation</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Full refurbishment</p>
+                    </div>
+                  </div>
+
+                  <!-- Conversion -->
+                  <div data-project-type="Conversion" class="project-card cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Conversion</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Garage, barn or loft</p>
+                    </div>
+                  </div>
+
+                  <!-- Kitchen -->
+                  <div data-project-type="Kitchen" class="project-card cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Kitchen</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">New or refitted</p>
+                    </div>
+                  </div>
+
+                  <!-- Bathroom -->
+                  <div data-project-type="Bathroom" class="project-card cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Bathroom</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Suite or wet room</p>
+                    </div>
+                  </div>
+
+                  <!-- Landscaping -->
+                  <div data-project-type="Landscaping" class="project-card cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Landscaping</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Patios & grounds</p>
+                    </div>
+                  </div>
+
+                  <!-- Other -->
+                  <div data-project-type="Other" class="project-card cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-4 transition duration-200 flex flex-col justify-between">
+                    <div>
+                      <svg class="w-6 h-6 text-[#1d2d26] mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                      <h4 class="font-bold text-sm text-[#1d2d26]">Other</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Something else</p>
+                    </div>
+                  </div>
+
+                </div>
               </div>
+
+              <!-- Section 2: Start Timing -->
               <div>
-                <label class="block text-xs font-medium text-stone-300 mb-1">Last Name *</label>
-                <input type="text" required placeholder="e.g. Smith" class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition">
+                <label class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-3">
+                  <svg class="w-4 h-4 text-[#1d2d26]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  WHEN ARE YOU HOPING TO START? <span class="text-red-500">*</span>
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div data-timing="As soon as possible" class="timing-pill cursor-pointer border-2 border-[#243830] bg-[#f2f5f3] rounded-xl p-3.5 text-sm font-semibold text-[#1d2d26] transition">
+                    As soon as possible
+                  </div>
+                  <div data-timing="Within 3 months" class="timing-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3.5 text-sm font-medium text-stone-700 transition">
+                    Within 3 months
+                  </div>
+                  <div data-timing="3–6 months" class="timing-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3.5 text-sm font-medium text-stone-700 transition">
+                    3–6 months
+                  </div>
+                  <div data-timing="6+ months / just exploring" class="timing-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3.5 text-sm font-medium text-stone-700 transition">
+                    6+ months / just exploring
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Section 3: Rough Budget -->
               <div>
-                <label class="block text-xs font-medium text-stone-300 mb-1">Email Address *</label>
-                <input type="email" required placeholder="john@example.co.uk" class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition">
+                <label class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-3">
+                  <span class="font-sans text-sm font-bold">£</span>
+                  ROUGH BUDGET (OPTIONAL)
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div data-budget="Under £10k" class="budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition">
+                    Under £10k
+                  </div>
+                  <div data-budget="£10k–£25k" class="budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition">
+                    £10k–£25k
+                  </div>
+                  <div data-budget="£25k–£50k" class="budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition">
+                    £25k–£50k
+                  </div>
+                  <div data-budget="£50k–£100k" class="budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition">
+                    £50k–£100k
+                  </div>
+                  <div data-budget="Over £100k" class="budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition">
+                    Over £100k
+                  </div>
+                  <div data-budget="Not sure yet" class="budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition">
+                    Not sure yet
+                  </div>
+                </div>
               </div>
+
+              <!-- Step 1 Error Message -->
+              <div id="step-1-error" class="hidden text-xs font-semibold text-red-600 bg-red-50 p-3 rounded-lg border border-red-200">
+                Please select both a project type and your desired start timing to continue.
+              </div>
+
+              <!-- Step 1 Bottom Action -->
+              <div class="flex justify-end pt-2">
+                <button id="step-1-next" type="button" class="px-7 py-3.5 bg-[#93a098] hover:bg-[#243830] text-white font-semibold text-sm rounded-xl transition flex items-center gap-2 shadow-sm">
+                  <span>Continue</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- STEP 2 CONTAINER -->
+            <div id="enquiry-step-2" class="space-y-7 hidden">
               <div>
-                <label class="block text-xs font-medium text-stone-300 mb-1">Phone Number *</label>
-                <input type="tel" required placeholder="07123 456789" class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition">
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-3">
+                  TELL US ABOUT YOUR PLANS <span class="text-red-500">*</span>
+                </label>
+                <textarea id="plans-text" rows="5" placeholder="e.g. We'd like a rear extension to create an open-plan kitchen and dining area, with bi-fold doors onto the garden..." class="w-full bg-white border border-stone-200 rounded-xl p-4 text-stone-800 text-sm focus:outline-none focus:border-[#243830] focus:ring-1 focus:ring-[#243830] transition placeholder:text-stone-400 resize-y"></textarea>
+              </div>
+
+              <!-- Info callout box -->
+              <div class="bg-[#fcfaf7] border border-stone-200/90 rounded-xl p-4.5 flex items-start gap-3 text-stone-600 text-xs sm:text-sm leading-relaxed">
+                <svg class="w-5 h-5 text-[#1d2d26] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>Don't worry about getting every detail right — this just helps us come prepared for your free consultation. You can add more later.</span>
+              </div>
+
+              <!-- Step 2 Error Message -->
+              <div id="step-2-error" class="hidden text-xs font-semibold text-red-600 bg-red-50 p-3 rounded-lg border border-red-200">
+                Please provide a brief description of your plans before continuing.
+              </div>
+
+              <!-- Step 2 Navigation Actions -->
+              <div class="flex items-center justify-between pt-2">
+                <button id="step-2-back" type="button" class="px-6 py-3 border border-stone-300 hover:border-stone-400 bg-white hover:bg-stone-50 text-stone-700 font-semibold text-sm rounded-xl transition flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  <span>Back</span>
+                </button>
+                <button id="step-2-next" type="button" class="px-7 py-3.5 bg-[#93a098] hover:bg-[#243830] text-white font-semibold text-sm rounded-xl transition flex items-center gap-2 shadow-sm">
+                  <span>Continue</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
               </div>
             </div>
 
-            <div>
-              <label class="block text-xs font-medium text-stone-300 mb-1">Town or Postcode in North Norfolk</label>
-              <input type="text" placeholder="e.g. Holt, NR25" class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition">
+            <!-- STEP 3 CONTAINER -->
+            <div id="enquiry-step-3" class="space-y-6 hidden">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-1.5">FULL NAME <span class="text-red-500">*</span></label>
+                  <input id="enquiry-fullname" type="text" required placeholder="e.g. Sarah Jenkins" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-800 text-sm focus:outline-none focus:border-[#243830] focus:ring-1 focus:ring-[#243830] transition placeholder:text-stone-400">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-1.5">EMAIL ADDRESS <span class="text-red-500">*</span></label>
+                  <input id="enquiry-email" type="email" required placeholder="sarah@example.co.uk" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-800 text-sm focus:outline-none focus:border-[#243830] focus:ring-1 focus:ring-[#243830] transition placeholder:text-stone-400">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-1.5">TELEPHONE</label>
+                  <input id="enquiry-phone" type="tel" placeholder="07123 456 789" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-800 text-sm focus:outline-none focus:border-[#243830] focus:ring-1 focus:ring-[#243830] transition placeholder:text-stone-400">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-1.5">PROJECT POSTCODE <span class="text-red-500">*</span></label>
+                  <input id="enquiry-postcode" type="text" required placeholder="e.g. NR27 9AA" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-800 text-sm focus:outline-none focus:border-[#243830] focus:ring-1 focus:ring-[#243830] transition placeholder:text-stone-400">
+                </div>
+              </div>
+
+              <!-- Preferred Contact Method -->
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#1d2d26] mb-2">PREFERRED CONTACT METHOD</label>
+                <div class="flex items-center gap-6 text-sm font-medium text-stone-700">
+                  <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="contact_method" value="Email" class="accent-[#243830] w-4 h-4">
+                    <span>Email</span>
+                  </label>
+                  <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="contact_method" value="Telephone" checked class="accent-[#243830] w-4 h-4">
+                    <span>Telephone</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Project Summary Banner -->
+              <div class="bg-[#f8f7f4] border border-stone-200/80 rounded-xl p-4 text-stone-800 text-sm font-medium">
+                <span id="summary-text">Project: Extension · Starting as soon as possible</span>
+              </div>
+
+              <!-- Terms Consent Checkbox -->
+              <div class="flex items-start gap-3 text-xs text-stone-600 leading-snug">
+                <input id="enquiry-consent" type="checkbox" required class="mt-0.5 accent-[#243830] w-4 h-4 rounded shrink-0">
+                <label for="enquiry-consent" class="cursor-pointer">
+                  I agree to Oakwood Building Services contacting me regarding my enquiry. Details are used only to respond and are never shared with third parties.
+                </label>
+              </div>
+
+              <!-- Step 3 Error Message -->
+              <div id="step-3-error" class="hidden text-xs font-semibold text-red-600 bg-red-50 p-3 rounded-lg border border-red-200">
+                Please fill in all required fields and accept the privacy agreement to submit.
+              </div>
+
+              <!-- Step 3 Navigation & Submit Actions -->
+              <div class="flex items-center justify-between pt-2">
+                <button id="step-3-back" type="button" class="px-6 py-3 border border-stone-300 hover:border-stone-400 bg-white hover:bg-stone-50 text-stone-700 font-semibold text-sm rounded-xl transition flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                  <span>Back</span>
+                </button>
+                <button id="enquiry-submit-btn" type="button" class="px-7 py-3.5 bg-[#93a098] hover:bg-[#243830] text-white font-semibold text-sm rounded-xl transition flex items-center gap-2 shadow-sm">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                  <span>Send My Project Enquiry</span>
+                </button>
+              </div>
+
+              <!-- Success Feedback Message -->
+              <div id="enquiry-success" class="hidden p-4 rounded-xl bg-emerald-900 text-white text-sm font-medium space-y-1">
+                <p class="font-bold text-base">✓ Enquiry Submitted Successfully!</p>
+                <p class="text-xs text-stone-200">Thank you for getting in touch. Greg and the team at Oakwood Building Services will review your project details and contact you shortly.</p>
+              </div>
+
             </div>
 
-            <div>
-              <label class="block text-xs font-medium text-stone-300 mb-1">Type of Work</label>
-              <select class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition">
-                <option value="extensions">Extensions</option>
-                <option value="conversions">Conversions</option>
-                <option value="renovations">Renovations</option>
-                <option value="kitchens">Kitchens</option>
-                <option value="windows">Windows</option>
-                <option value="bathrooms">Bathrooms</option>
-                <option value="roofing">Roofing</option>
-                <option value="electrical">Electrical</option>
-                <option value="damp_proofing">Damp Proofing & Timber</option>
-                <option value="pointing">Pointing Works</option>
-                <option value="plumbing">Plumbing & Heating</option>
-                <option value="underfloor_heating">Underfloor Heating</option>
-                <option value="plastering">Plastering</option>
-                <option value="landscaping">Landscaping</option>
-                <option value="other">Other Building Service</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-xs font-medium text-stone-300 mb-1">Tell Us About Your Project</label>
-              <textarea rows="4" required placeholder="Brief outline of dimensions, ideas, or existing architectural drawings..." class="w-full bg-navy-950 border border-navy-800 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-gold-500 transition"></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-3.5 bg-gold-600 hover:bg-gold-500 text-navy-950 font-bold text-sm rounded-lg transition duration-200 shadow-md">
-              Send Enquiry & Request Consultation
-            </button>
-
-            <!-- Friendly inline confirmation message container (No alert() used) -->
-            <div id="form-feedback" class="hidden p-3.5 rounded-lg bg-emerald-950/80 border border-emerald-500 text-emerald-200 text-xs">
-              Thank you! Your enquiry has been received. Greg and the Oakwood team will be in touch shortly to confirm your consultation.
-            </div>
           </form>
+
         </div>
 
       </div>
@@ -2321,34 +2529,209 @@
       }
     });
 
-    // "Get A Quote" Button on Modal Tile -> Scroll to Contact & Prefill Dropdown
-    if (modalQuoteBtn) {
-      modalQuoteBtn.addEventListener('click', () => {
-        closeServiceModal();
+    // 4. Multi-Step Quote Enquiry Form Logic
+    let selectedProjectType = "Extension";
+    let selectedTiming = "As soon as possible";
+    let selectedBudget = null;
+    let currentStep = 1;
 
-        // Prefill contact form select field if matching option exists
-        const selectElement = document.querySelector('#consultation-form select');
-        if (selectElement && currentServiceKey) {
-          selectElement.value = currentServiceKey;
-        }
+    const step1Container = document.getElementById('enquiry-step-1');
+    const step2Container = document.getElementById('enquiry-step-2');
+    const step3Container = document.getElementById('enquiry-step-3');
+    const stepIndicator = document.getElementById('step-indicator');
+    const progressBar1 = document.getElementById('progress-bar-1');
+    const progressBar2 = document.getElementById('progress-bar-2');
+    const progressBar3 = document.getElementById('progress-bar-3');
 
-        // Smooth scroll to contact section
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
+    const projectCards = document.querySelectorAll('.project-card');
+    const timingPills = document.querySelectorAll('.timing-pill');
+    const budgetPills = document.querySelectorAll('.budget-pill');
+
+    const step1NextBtn = document.getElementById('step-1-next');
+    const step2BackBtn = document.getElementById('step-2-back');
+    const step2NextBtn = document.getElementById('step-2-next');
+    const step3BackBtn = document.getElementById('step-3-back');
+    const enquirySubmitBtn = document.getElementById('enquiry-submit-btn');
+
+    const plansText = document.getElementById('plans-text');
+    const step1Error = document.getElementById('step-1-error');
+    const step2Error = document.getElementById('step-2-error');
+    const step3Error = document.getElementById('step-3-error');
+    const enquirySuccess = document.getElementById('enquiry-success');
+    const summaryText = document.getElementById('summary-text');
+
+    function updateProjectCardsUI() {
+      projectCards.forEach(card => {
+        const pType = card.getAttribute('data-project-type');
+        if (pType === selectedProjectType) {
+          card.className = "project-card cursor-pointer border-2 border-[#243830] bg-[#f2f5f3] rounded-xl p-4 transition duration-200 flex flex-col justify-between";
+        } else {
+          card.className = "project-card cursor-pointer border border-stone-200 hover:border-[#243830] bg-white rounded-xl p-4 transition duration-200 flex flex-col justify-between";
         }
       });
     }
 
-    // 4. Mock Enquiry Form Submission (No alert())
-    const form = document.getElementById('consultation-form');
-    const feedback = document.getElementById('form-feedback');
+    function updateTimingPillsUI() {
+      timingPills.forEach(pill => {
+        const timing = pill.getAttribute('data-timing');
+        if (timing === selectedTiming) {
+          pill.className = "timing-pill cursor-pointer border-2 border-[#243830] bg-[#f2f5f3] rounded-xl p-3.5 text-sm font-semibold text-[#1d2d26] transition";
+        } else {
+          pill.className = "timing-pill cursor-pointer border border-stone-200 hover:border-[#243830] bg-white rounded-xl p-3.5 text-sm font-medium text-stone-700 transition";
+        }
+      });
+    }
 
-    if (form && feedback) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        feedback.classList.remove('hidden');
-        form.reset();
+    function updateBudgetPillsUI() {
+      budgetPills.forEach(pill => {
+        const budget = pill.getAttribute('data-budget');
+        if (budget === selectedBudget) {
+          pill.className = "budget-pill cursor-pointer border-2 border-[#243830] bg-[#f2f5f3] rounded-xl p-3 text-sm font-semibold text-[#1d2d26] text-center transition";
+        } else {
+          pill.className = "budget-pill cursor-pointer border border-stone-200 hover:border-[#243830] bg-white rounded-xl p-3 text-sm font-medium text-stone-700 text-center transition";
+        }
+      });
+    }
+
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        selectedProjectType = card.getAttribute('data-project-type');
+        updateProjectCardsUI();
+        if (step1Error) step1Error.classList.add('hidden');
+      });
+    });
+
+    timingPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        selectedTiming = pill.getAttribute('data-timing');
+        updateTimingPillsUI();
+        if (step1Error) step1Error.classList.add('hidden');
+      });
+    });
+
+    budgetPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const budgetVal = pill.getAttribute('data-budget');
+        if (selectedBudget === budgetVal) {
+          selectedBudget = null;
+        } else {
+          selectedBudget = budgetVal;
+        }
+        updateBudgetPillsUI();
+      });
+    });
+
+    function goToStep(step) {
+      currentStep = step;
+      step1Container.classList.add('hidden');
+      step2Container.classList.add('hidden');
+      step3Container.classList.add('hidden');
+
+      if (step === 1) {
+        step1Container.classList.remove('hidden');
+        stepIndicator.textContent = 'Step 1 of 3';
+        progressBar1.className = 'h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300';
+        progressBar2.className = 'h-1.5 sm:h-2 rounded-full bg-stone-200 transition-colors duration-300';
+        progressBar3.className = 'h-1.5 sm:h-2 rounded-full bg-stone-200 transition-colors duration-300';
+      } else if (step === 2) {
+        step2Container.classList.remove('hidden');
+        stepIndicator.textContent = 'Step 2 of 3';
+        progressBar1.className = 'h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300';
+        progressBar2.className = 'h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300';
+        progressBar3.className = 'h-1.5 sm:h-2 rounded-full bg-stone-200 transition-colors duration-300';
+      } else if (step === 3) {
+        step3Container.classList.remove('hidden');
+        stepIndicator.textContent = 'Step 3 of 3';
+        progressBar1.className = 'h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300';
+        progressBar2.className = 'h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300';
+        progressBar3.className = 'h-1.5 sm:h-2 rounded-full bg-[#243830] transition-colors duration-300';
+
+        let timingDisplay = selectedTiming ? selectedTiming.toLowerCase() : "as soon as possible";
+        if (selectedBudget) {
+          summaryText.textContent = `Project: ${selectedProjectType} · Starting ${timingDisplay} · Budget: ${selectedBudget}`;
+        } else {
+          summaryText.textContent = `Project: ${selectedProjectType} · Starting ${timingDisplay}`;
+        }
+      }
+    }
+
+    if (step1NextBtn) {
+      step1NextBtn.addEventListener('click', () => {
+        if (!selectedProjectType || !selectedTiming) {
+          if (step1Error) step1Error.classList.remove('hidden');
+          return;
+        }
+        if (step1Error) step1Error.classList.add('hidden');
+        goToStep(2);
+      });
+    }
+
+    if (step2BackBtn) {
+      step2BackBtn.addEventListener('click', () => {
+        goToStep(1);
+      });
+    }
+
+    if (step2NextBtn) {
+      step2NextBtn.addEventListener('click', () => {
+        if (!plansText.value.trim()) {
+          if (step2Error) step2Error.classList.remove('hidden');
+          return;
+        }
+        if (step2Error) step2Error.classList.add('hidden');
+        goToStep(3);
+      });
+    }
+
+    if (step3BackBtn) {
+      step3BackBtn.addEventListener('click', () => {
+        goToStep(2);
+      });
+    }
+
+    if (enquirySubmitBtn) {
+      enquirySubmitBtn.addEventListener('click', () => {
+        const fullname = document.getElementById('enquiry-fullname').value.trim();
+        const email = document.getElementById('enquiry-email').value.trim();
+        const postcode = document.getElementById('enquiry-postcode').value.trim();
+        const consent = document.getElementById('enquiry-consent').checked;
+
+        if (!fullname || !email || !postcode || !consent) {
+          if (step3Error) step3Error.classList.remove('hidden');
+          return;
+        }
+
+        if (step3Error) step3Error.classList.add('hidden');
+        enquirySuccess.classList.remove('hidden');
+        enquirySubmitBtn.classList.add('hidden');
+        if (step3BackBtn) step3BackBtn.classList.add('hidden');
+      });
+    }
+
+    // Modal Quote Button -> Jump to Step 1 & select project type
+    if (modalQuoteBtn) {
+      modalQuoteBtn.addEventListener('click', () => {
+        closeServiceModal();
+
+        const serviceToProjectType = {
+          extensions: "Extension",
+          conversions: "Conversion",
+          renovations: "Renovation",
+          kitchens: "Kitchen",
+          bathrooms: "Bathroom",
+          landscaping: "Landscaping"
+        };
+
+        if (currentServiceKey && serviceToProjectType[currentServiceKey]) {
+          selectedProjectType = serviceToProjectType[currentServiceKey];
+          updateProjectCardsUI();
+        }
+
+        goToStep(1);
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     }
   </script>
