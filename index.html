@@ -2693,8 +2693,11 @@
       enquirySubmitBtn.addEventListener('click', () => {
         const fullname = document.getElementById('enquiry-fullname').value.trim();
         const email = document.getElementById('enquiry-email').value.trim();
+        const phone = document.getElementById('enquiry-phone').value.trim() || 'Not provided';
         const postcode = document.getElementById('enquiry-postcode').value.trim();
         const consent = document.getElementById('enquiry-consent').checked;
+        const contactMethod = document.querySelector('input[name="contact_method"]:checked')?.value || 'Telephone';
+        const plans = plansText.value.trim();
 
         if (!fullname || !email || !postcode || !consent) {
           if (step3Error) step3Error.classList.remove('hidden');
@@ -2702,6 +2705,34 @@
         }
 
         if (step3Error) step3Error.classList.add('hidden');
+
+        // Construct email subject and body with form details
+        const subject = `New Project Enquiry: ${selectedProjectType} - ${fullname}`;
+        const body = `New Project Enquiry for Oakwood Building Services
+
+Contact Details:
+----------------
+Name: ${fullname}
+Email: ${email}
+Phone: ${phone}
+Postcode: ${postcode}
+Preferred Contact Method: ${contactMethod}
+
+Project Details:
+----------------
+Project Type: ${selectedProjectType}
+Start Timing: ${selectedTiming}
+Rough Budget: ${selectedBudget || 'Not specified'}
+
+Description / Plans:
+${plans}
+`;
+
+        const mailtoUrl = `mailto:oakwoodbs11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open in a new browser window/tab to connect to default email client
+        window.open(mailtoUrl, '_blank');
+
         enquirySuccess.classList.remove('hidden');
         enquirySubmitBtn.classList.add('hidden');
         if (step3BackBtn) step3BackBtn.classList.add('hidden');
