@@ -2012,14 +2012,14 @@
     }
     window.addEventListener('resize', updateDimensions);
 
-    function loadBAExample(index) {
-      if (index < 0) index = beforeAfterData.length - 1;
-      if (index >= beforeAfterData.length) index = 0;
-      currentBAIndex = index;
+    function getValidBAIndex(index, length) {
+      if (length <= 0) return 0;
+      if (index < 0) return length - 1;
+      if (index >= length) return 0;
+      return index;
+    }
 
-      const item = beforeAfterData[currentBAIndex];
-      if (!item) return;
-
+    function updateBAImages(item) {
       if (beforeImage) {
         beforeImage.src = item.beforeImg;
         beforeImage.alt = "Before - " + item.title;
@@ -2028,15 +2028,31 @@
         afterImage.src = item.afterImg;
         afterImage.alt = "After - " + item.title;
       }
-      if (baBadge) baBadge.textContent = `Project ${currentBAIndex + 1} of ${beforeAfterData.length}`;
+    }
+
+    function updateBAInfo(item, index, total) {
+      if (baBadge) baBadge.textContent = `Project ${index + 1} of ${total}`;
       if (baTag) baTag.textContent = item.tag || item.title;
       if (baTitle) baTitle.textContent = item.title;
       if (baDesc) baDesc.textContent = item.description;
+    }
 
+    function resetBASliderPosition() {
       if (beforeClip && sliderBar) {
         beforeClip.style.width = '50%';
         sliderBar.style.left = '50%';
       }
+    }
+
+    function loadBAExample(index) {
+      currentBAIndex = getValidBAIndex(index, beforeAfterData.length);
+      const item = beforeAfterData[currentBAIndex];
+      if (!item) return;
+
+      updateBAImages(item);
+      updateBAInfo(item, currentBAIndex, beforeAfterData.length);
+      resetBASliderPosition();
+
       updateDimensions();
       renderBADots();
       renderBAThumbnails();
