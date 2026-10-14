@@ -401,7 +401,9 @@
     <!-- Hero Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
       <img 
-        src="images/hero-bg.jpeg"
+        src="images/hero-bg.webp"
+        fetchpriority="high"
+        decoding="async"
         alt="Bespoke brick home extension with bifold doors and patio in North Norfolk"
         class="w-full h-full object-cover object-center opacity-75 transform scale-105 duration-1000 ease-out"
         onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/153460/ffffff?text=Oakwood+Building+Services+Norfolk';"
@@ -465,7 +467,8 @@
             <div class="rounded-2xl overflow-hidden shadow-md h-56 bg-stone-200">
               <img 
                 src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" 
-                alt="Norfolk extension interior finish" 
+                loading="lazy" decoding="async"
+                loading="lazy" decoding="async" alt="Norfolk extension interior finish"
                 class="w-full h-full object-cover hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Interior+Craft';"
               />
@@ -473,7 +476,8 @@
             <div class="rounded-2xl overflow-hidden shadow-md h-72 bg-stone-200">
               <img 
                 src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" 
-                alt="Bathroom renovation completed" 
+                loading="lazy" decoding="async"
+                loading="lazy" decoding="async" alt="Bathroom renovation completed"
                 class="w-full h-full object-cover hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Bathroom+Renovation';"
               />
@@ -483,7 +487,8 @@
             <div class="rounded-2xl overflow-hidden shadow-md h-72 bg-stone-200">
               <img 
                 src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80" 
-                alt="Kitchen design and fitting" 
+                loading="lazy" decoding="async"
+                loading="lazy" decoding="async" alt="Kitchen design and fitting"
                 class="w-full h-full object-cover hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Kitchen+Installation';"
               />
@@ -491,7 +496,8 @@
             <div class="rounded-2xl overflow-hidden shadow-md h-56 bg-stone-200">
               <img 
                 src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=700&q=80" 
-                alt="Skilled bricklayers and builders on site" 
+                loading="lazy" decoding="async"
+                loading="lazy" decoding="async" alt="Skilled bricklayers and builders on site"
                 class="w-full h-full object-cover hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Skilled+Builders';"
               />
@@ -590,7 +596,7 @@
           <!-- After Image (Background) -->
           <img 
             id="after-image"
-            src="images/afterhindolveston.jpg"
+            src="images/afterhindolveston.webp" loading="lazy" decoding="async"
             alt="After - Hindolveston Extension"
             class="absolute inset-0 w-full h-full object-cover"
             onerror="this.onerror=null; this.src='https://placehold.co/1200x800/153460/fff?text=After+Renovation';"
@@ -603,7 +609,7 @@
           <div id="before-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-white shadow-2xl">
             <img 
               id="before-image"
-              src="images/beforehindolveston.jpg"
+              src="images/beforehindolveston.webp" loading="lazy" decoding="async"
               alt="Before - Hindolveston Extension"
               class="absolute inset-0 w-full h-full object-cover max-w-none"
               onerror="this.onerror=null; this.src='https://placehold.co/1200x800/555/fff?text=Before+Renovation';"
@@ -677,10 +683,7 @@
         <div data-service="extensions" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="images/extension1.png"
-                alt="Home extensions in Norfolk"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="images/extension1.webp" alt="Home extensions in Norfolk" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Extensions';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -716,10 +719,7 @@
         <div data-service="conversions" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="images/conversions-1.png"
-                alt="Conversions in North Norfolk"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="images/conversions-1.webp" alt="Conversions in North Norfolk" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Conversions';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -755,10 +755,7 @@
         <div data-service="renovations" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
-                alt="Home renovations in Norfolk"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Home renovations in Norfolk" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Renovations';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -794,10 +791,7 @@
         <div data-service="kitchens" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
-                alt="Kitchen installations"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Kitchen installations" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Kitchens';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -833,10 +827,7 @@
         <div data-service="windows" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=800&q=80"
-                alt="Windows installation and supply"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&w=800&q=80" alt="Windows installation and supply" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Windows';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -872,10 +863,7 @@
         <div data-service="bathrooms" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
-                alt="Bathroom design and installation"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Bathroom design and installation" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Bathrooms';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -911,10 +899,7 @@
         <div data-service="roofing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
-                alt="Roofing services in Norfolk"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Roofing services in Norfolk" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Roofing';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -950,10 +935,7 @@
         <div data-service="electrical" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
-                alt="Electrical works"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Electrical works" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Electrical';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -989,10 +971,7 @@
         <div data-service="damp_proofing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                alt="Damp proofing and timber treatments"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Damp proofing and timber treatments" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Damp+Proofing';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1028,10 +1007,7 @@
         <div data-service="pointing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80"
-                alt="Traditional brick and mortar pointing"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80" alt="Traditional brick and mortar pointing" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Pointing';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1067,10 +1043,7 @@
         <div data-service="plumbing" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80"
-                alt="Plumbing and heating services"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80" alt="Plumbing and heating services" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Plumbing';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1106,10 +1079,7 @@
         <div data-service="underfloor_heating" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
-                alt="Underfloor heating installation"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Underfloor heating installation" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Underfloor+Heating';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1145,10 +1115,7 @@
         <div data-service="plastering" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80"
-                alt="Plastering and rendering"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80" alt="Plastering and rendering" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Plastering';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1184,10 +1151,7 @@
         <div data-service="landscaping" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img
-                src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=800&q=80"
-                alt="Landscaping and outdoor paving"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=800&q=80" alt="Landscaping and outdoor paving" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Landscaping';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1800,7 +1764,7 @@
       <div class="relative rounded-2xl overflow-hidden bg-navy-900/90 border border-white/10 shadow-inner mb-6 group">
         <div id="carousel-slides" class="relative h-64 sm:h-80 md:h-96 w-full">
           <!-- Slide Image injected by JS -->
-          <img id="carousel-img" src="" alt="" class="w-full h-full object-cover transition-all duration-500" />
+          <img id="carousel-img" src="" alt="" loading="lazy" decoding="async" class="w-full h-full object-cover transition-all duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-black/20"></div>
 
           <!-- Image Caption & Counter -->
@@ -1878,7 +1842,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-3">
-          <img src="images/oak.png" alt="Oakwood Logo" class="h-10 w-auto object-contain rounded" />
+          <img src="images/oak.png" alt="Oakwood Logo" loading="lazy" decoding="async" class="h-10 w-auto object-contain rounded" />
           <div>
             <p class="font-bold text-white text-base leading-tight">Oakwood Building Services (Norfolk) Ltd</p>
             <p class="text-xs text-stone-400">Quality Craftsmanship across North Norfolk</p>
@@ -1925,48 +1889,48 @@
         id: 1,
         title: "Hindolveston Extension",
         tag: "Two-Story Extension & Orangery",
-        beforeImg: "images/beforehindolveston.jpg",
-        afterImg: "images/afterhindolveston.jpg",
+        beforeImg: "images/beforehindolveston.webp",
+        afterImg: "images/afterhindolveston.webp",
         description: "Hindolveston was a design by Leon Morris of a 2 story rear extension with a orangey and full renovation of the main house. Undertaken by Oakwood Building Services, North Norfolk."
       },
       {
         id: 2,
         title: "ROUGHTON ROAD - CROMER",
         tag: "Cromer",
-        beforeImg: "images/rrbefore.jpg",
-        afterImg: "images/rrafter.jpg",
+        beforeImg: "images/rrbefore.webp",
+        afterImg: "images/rrafter.webp",
         description: "Another incredible transformation, this time of a 1950's bungalow in Cromer. We worked with the client to create a light and airy interior and ensure that the quality of the exterior finish added huge kerb appeal. Work with us on your next project?"
       },
       {
         id: 3,
         title: "THE RISE - SHERINGHAM",
         tag: "Sheringham",
-        beforeImg: "images/risebefore.jpg",
-        afterImg: "images/riseafter.jpg",
+        beforeImg: "images/risebefore.webp",
+        afterImg: "images/riseafter.webp",
         description: "Working from a Design by Architects Mr A Griggs and Mr L Morris we developed 11 The Rise Sheringham from a empty 3 bed detached property into a modern spacious 4 bedroom home by adding a rear 2 Story extension with a full renovation of the existing home including landscaping to the front and back ."
       },
       {
         id: 4,
         title: "NORWICH ROAD - CROMER",
         tag: "Cromer",
-        beforeImg: "images/norwichroadbefore.jpg",
-        afterImg: "images/norwichroadafter.jpg",
+        beforeImg: "images/norwichroadbefore.webp",
+        afterImg: "images/norwichroadafter.webp",
         description: "Full conversion plus the addition of an extension to a property carried out by Oakwood Building Services on Norwich Road in Cromer"
       },
       {
         id: 5,
         title: "THE CONSTANTIA - EAST RUNTON",
         tag: "East Runton",
-        beforeImg: "images/consbefore.jpg",
-        afterImg: "images/consafter.jpg",
+        beforeImg: "images/consbefore.webp",
+        afterImg: "images/consafter.webp",
         description: "Conversion of this former restaurant into eight luxury apartments"
       },
       {
         id: 6,
         title: "HARDWOOD KNOWL - CROMER",
         tag: "Cromer",
-        beforeImg: "images/hkbefore.jpg",
-        afterImg: "images/hkafter.jpg",
+        beforeImg: "images/hkbefore.webp",
+        afterImg: "images/hkafter.webp",
         description: "Landscape transformation of this area of waste land into a useable car park"
       }
     ];
@@ -2086,7 +2050,7 @@
 
         btn.innerHTML = `
           <div class="relative w-full h-12 rounded overflow-hidden bg-stone-200">
-            <img src="${item.afterImg}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition" onerror="this.onerror=null; this.src='https://placehold.co/200x120/153460/fff?text=Project+${idx+1}';" />
+            <img src="${item.afterImg}" alt="${item.title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition" onerror="this.onerror=null; this.src='https://placehold.co/200x120/153460/fff?text=Project+${idx+1}';" />
             <span class="absolute bottom-0.5 right-0.5 text-[9px] font-bold px-1 py-0.2 ${isActive ? 'bg-gold-500 text-navy-950' : 'bg-navy-900/80 text-white'} rounded">#${idx+1}</span>
           </div>
           <span class="text-[11px] font-semibold truncate w-full text-center ${isActive ? 'text-gold-400' : 'text-stone-700'}">${item.title}</span>
@@ -2145,9 +2109,9 @@
           "Integrated glazing, bifold doors & roof lanterns"
         ],
         gallery: [
-          { url: "images/extension1.png", caption: "High-quality house extension with modern doors and patio" },
-          { url: "images/extension2.png", caption: "Seamless property extension blending modern and traditional design" },
-          { url: "images/extension3.png", caption: "Rear house extension enhancing lifestyle and property value" }
+          { url: "images/extension1.webp", caption: "High-quality house extension with modern doors and patio" },
+          { url: "images/extension2.webp", caption: "Seamless property extension blending modern and traditional design" },
+          { url: "images/extension3.webp", caption: "Rear house extension enhancing lifestyle and property value" }
         ]
       },
       conversions: {
@@ -2161,10 +2125,10 @@
           "Complete utility, electrical & plumbing fit-out"
         ],
         gallery: [
-          { url: "images/conversions-1.png", caption: "Bespoke conversion exterior finish with modern windows and doors" },
-          { url: "images/conversions-2.png", caption: "High-quality conversion living area with exposed beams and skylights" },
-          { url: "images/conversions-3.png", caption: "Bespoke conversion interior finish and layout" },
-          { url: "images/conversions-4.png", caption: "Luxury conversion open-plan space with feature lighting and quality joinery" }
+          { url: "images/conversions-1.webp", caption: "Bespoke conversion exterior finish with modern windows and doors" },
+          { url: "images/conversions-2.webp", caption: "High-quality conversion living area with exposed beams and skylights" },
+          { url: "images/conversions-3.webp", caption: "Bespoke conversion interior finish and layout" },
+          { url: "images/conversions-4.webp", caption: "Luxury conversion open-plan space with feature lighting and quality joinery" }
         ]
       },
       renovations: {
@@ -2749,7 +2713,7 @@ ${plans}
         tag: "Two-Storey Extension & Orangery",
         town: "Hindolveston",
         desc: "Two-storey rear extension with orangery and full house renovation.",
-        image: "images/afterhindolveston.jpg",
+        image: "images/afterhindolveston.webp",
         coords: [52.8333, 1.0500],
         duration: "14 Weeks",
         management: "Full Project Management"
@@ -2760,7 +2724,7 @@ ${plans}
         tag: "Two-Storey Extension & Renovation",
         town: "Sheringham",
         desc: "Empty 3-bed detached home extended to 4 bedrooms with full internal finish and landscaping.",
-        image: "images/riseafter.jpg",
+        image: "images/riseafter.webp",
         coords: [52.9431, 1.2104],
         duration: "12 Weeks",
         management: "Turnkey Management"
@@ -2771,7 +2735,7 @@ ${plans}
         tag: "Conversion & Extension",
         town: "Cromer",
         desc: "Full conversion plus addition of an extension to a residential property.",
-        image: "images/norwichroadafter.jpg",
+        image: "images/norwichroadafter.webp",
         coords: [52.9312, 1.2989],
         duration: "12 Weeks",
         management: "Conversion & Extension"
@@ -2782,7 +2746,7 @@ ${plans}
         tag: "Bungalow Remodel",
         town: "Cromer",
         desc: "1950s bungalow transformation creating light, open interiors and high kerb appeal.",
-        image: "images/rrafter.jpg",
+        image: "images/rrafter.webp",
         coords: [52.9230, 1.2940],
         duration: "10 Weeks",
         management: "Full Remodel"
@@ -2793,7 +2757,7 @@ ${plans}
         tag: "Apartment Conversion",
         town: "East Runton",
         desc: "Conversion of former restaurant into eight luxury residential apartments.",
-        image: "images/consafter.jpg",
+        image: "images/consafter.webp",
         coords: [52.9360, 1.2630],
         duration: "16 Weeks",
         management: "Luxury Conversion"
@@ -2804,7 +2768,7 @@ ${plans}
         tag: "Landscaping",
         town: "Cromer",
         desc: "Landscaping transformation of wasteland into a clean, functional space.",
-        image: "images/hkafter.jpg",
+        image: "images/hkafter.webp",
         coords: [52.9280, 1.3020],
         duration: "4 Weeks",
         management: "Groundworks & Paving"
@@ -2868,7 +2832,7 @@ ${plans}
 
         const popupHTML = `
           <div class="p-1 max-w-[220px]">
-            <img src="${proj.image}" alt="${proj.title}" class="w-full h-24 object-cover rounded-lg mb-2" onerror="this.onerror=null; this.src='https://placehold.co/400x250/153460/fff?text=${encodeURIComponent(proj.title)}';" />
+            <img src="${proj.image}" alt="${proj.title}" loading="lazy" decoding="async" class="w-full h-24 object-cover rounded-lg mb-2" onerror="this.onerror=null; this.src='https://placehold.co/400x250/153460/fff?text=${encodeURIComponent(proj.title)}';" />
             <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-navy-100 text-navy-900 mb-1">${proj.town}</span>
             <h4 class="font-bold text-navy-900 text-sm leading-tight">${proj.title}</h4>
             <p class="text-stone-600 text-xs mt-1 leading-snug">${proj.desc}</p>
@@ -2909,7 +2873,7 @@ ${plans}
         <article id="card-${proj.id}" class="project-card-item bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between cursor-pointer group" onclick="focusMapMarker('${proj.id}')">
           <div>
             <div class="h-56 overflow-hidden relative bg-stone-200">
-              <img src="${proj.image}" alt="${proj.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=${encodeURIComponent(proj.title)}';" />
+              <img src="${proj.image}" alt="${proj.title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=${encodeURIComponent(proj.title)}';" />
               <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60"></div>
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                 ${proj.town}
