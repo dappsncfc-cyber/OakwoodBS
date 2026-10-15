@@ -1737,6 +1737,112 @@
     </div>
   </section>
 
+  <!-- Glassmorphic Project Case Study Pop-Up Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 hidden opacity-0 transition-opacity duration-300">
+    <!-- Backdrop Blur Overlay -->
+    <div id="project-modal-backdrop" class="fixed inset-0 bg-navy-950/80 backdrop-blur-md transition-opacity"></div>
+
+    <!-- Glassmorphic Tile Container -->
+    <div class="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-navy-950/90 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl text-white p-5 sm:p-8 z-10 custom-scrollbar transform scale-95 transition-transform duration-300">
+
+      <!-- Close Button -->
+      <button id="project-modal-close" type="button" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition focus:outline-none z-20" aria-label="Close project modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <article itemscope itemtype="https://schema.org/CreativeWork">
+        <!-- Modal Header -->
+        <div class="mb-6 pr-10">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span id="pm-category" class="inline-block px-3 py-1 rounded-full bg-gold-500/20 border border-gold-400/30 text-gold-400 text-xs font-bold uppercase tracking-wider">
+              Project Category
+            </span>
+            <span id="pm-town" class="inline-block px-3 py-1 rounded-full bg-navy-800 border border-navy-700 text-stone-200 text-xs font-semibold">
+              Location Town
+            </span>
+          </div>
+          <h2 id="pm-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight" itemprop="name">
+            Project Title
+          </h2>
+        </div>
+
+        <!-- Before / After Images Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div class="relative rounded-2xl overflow-hidden bg-navy-900 border border-white/10 h-56 sm:h-64 group">
+            <img id="pm-after-img" src="" alt="Completed Work" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" itemprop="image" />
+            <span class="absolute top-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
+              After: Completed
+            </span>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden bg-navy-900 border border-white/10 h-56 sm:h-64 group">
+            <img id="pm-before-img" src="" alt="Before Work" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 bg-gold-600/95 backdrop-blur text-navy-950 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
+              Before Work
+            </span>
+          </div>
+        </div>
+
+        <!-- Metadata Definition List (Semantic HTML for Search & AI Crawlers) -->
+        <dl class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 mb-6 text-xs text-stone-300">
+          <div>
+            <dt class="text-gold-400 font-bold uppercase tracking-wider">Location</dt>
+            <dd id="pm-location" class="font-medium text-white mt-0.5" itemprop="location">Location details</dd>
+          </div>
+          <div>
+            <dt class="text-gold-400 font-bold uppercase tracking-wider">Project Category</dt>
+            <dd id="pm-category-dd" class="font-medium text-white mt-0.5">Category</dd>
+          </div>
+          <div>
+            <dt class="text-gold-400 font-bold uppercase tracking-wider">Architect / Designer</dt>
+            <dd id="pm-architect" class="font-medium text-white mt-0.5">Architect details</dd>
+          </div>
+        </dl>
+
+        <!-- Project Overview & Case Study Body -->
+        <div class="space-y-4 mb-6">
+          <h3 class="text-lg font-bold text-gold-400 border-b border-white/10 pb-2">Full Case Study & Overview</h3>
+          <div id="pm-full-text" class="text-stone-300 text-sm sm:text-base leading-relaxed space-y-3" itemprop="description">
+            <!-- Case study paragraphs injected by JS -->
+          </div>
+        </div>
+
+        <!-- Scope of Works (Highlights) -->
+        <div class="mb-6 p-5 rounded-2xl bg-white/5 border border-white/10">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-gold-400 mb-3">Scope of Works</h3>
+          <ul id="pm-highlights" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-stone-200">
+            <!-- Scope items injected by JS -->
+          </ul>
+        </div>
+
+        <!-- Verified Client Review (if present) -->
+        <div id="pm-review-container" class="hidden mb-6 p-5 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-stone-200">
+          <div class="flex items-center gap-1 text-gold-400 text-sm mb-2">
+            ★★★★★ <span class="text-xs text-stone-300 font-semibold ml-1">Verified Client Review</span>
+          </div>
+          <blockquote id="pm-review-quote" class="italic text-xs sm:text-sm leading-relaxed text-stone-100">
+            "Review text..."
+          </blockquote>
+          <cite id="pm-review-author" class="block mt-2 font-bold text-xs text-gold-400 not-italic">
+            — Author
+          </cite>
+        </div>
+
+        <!-- Modal Footer CTA -->
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-center sm:text-left">
+            <p class="text-xs text-stone-400">Planning a similar building or extension project in North Norfolk?</p>
+            <p class="text-sm font-semibold text-white">Contact Greg Hann & the Oakwood team for a free consultation</p>
+          </div>
+          <button id="pm-quote-btn" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-sm shadow-lg shadow-gold-500/20 hover:-translate-y-0.5 transition duration-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Enquire About Your Project
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
   <!-- Glassmorphic Service Details & Image Carousel Modal -->
   <div id="service-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 hidden opacity-0 transition-opacity duration-300">
     <!-- Backdrop Blur Overlay -->
@@ -1887,51 +1993,51 @@
     const beforeAfterData = [
       {
         id: 1,
-        title: "Hindolveston Extension",
-        tag: "Two-Story Extension & Orangery",
+        title: "Hindolveston Two-Storey Extension, Orangery & Full Renovation",
+        tag: "Hindolveston",
         beforeImg: "images/beforehindolveston.webp",
         afterImg: "images/afterhindolveston.webp",
-        description: "Hindolveston was a design by Leon Morris of a 2 story rear extension with a orangey and full renovation of the main house. Undertaken by Oakwood Building Services, North Norfolk."
+        description: "Substantial two-storey rear extension, glazed orangery, and full period property renovation in Hindolveston, North Norfolk, designed by Leon Morris."
       },
       {
         id: 2,
-        title: "ROUGHTON ROAD - CROMER",
-        tag: "Cromer",
-        beforeImg: "images/rrbefore.webp",
-        afterImg: "images/rrafter.webp",
-        description: "Another incredible transformation, this time of a 1950's bungalow in Cromer. We worked with the client to create a light and airy interior and ensure that the quality of the exterior finish added huge kerb appeal. Work with us on your next project?"
-      },
-      {
-        id: 3,
-        title: "THE RISE - SHERINGHAM",
+        title: "11 The Rise — Detached Home Extension & Renovation in Sheringham",
         tag: "Sheringham",
         beforeImg: "images/risebefore.webp",
         afterImg: "images/riseafter.webp",
-        description: "Working from a Design by Architects Mr A Griggs and Mr L Morris we developed 11 The Rise Sheringham from a empty 3 bed detached property into a modern spacious 4 bedroom home by adding a rear 2 Story extension with a full renovation of the existing home including landscaping to the front and back ."
+        description: "Complete transformation of an empty 3-bed detached house in Sheringham into a spacious 4-bedroom coastal family home with architects A. Griggs & L. Morris."
+      },
+      {
+        id: 3,
+        title: "Roughton Road — 1950s Bungalow Extension & Modernisation in Cromer",
+        tag: "Cromer",
+        beforeImg: "images/rrbefore.webp",
+        afterImg: "images/rrafter.webp",
+        description: "Full extension, internal reconfiguration, and kerb-appeal exterior overhaul of a 1950s bungalow on Roughton Road, Cromer."
       },
       {
         id: 4,
-        title: "NORWICH ROAD - CROMER",
+        title: "Norwich Road — Property Conversion & Bespoke Extension in Cromer",
         tag: "Cromer",
         beforeImg: "images/norwichroadbefore.webp",
         afterImg: "images/norwichroadafter.webp",
-        description: "Full conversion plus the addition of an extension to a property carried out by Oakwood Building Services on Norwich Road in Cromer"
+        description: "High-specification property conversion and bespoke extension on Norwich Road, Cromer, combining structural alterations with modern design."
       },
       {
         id: 5,
-        title: "THE CONSTANTIA - EAST RUNTON",
+        title: "The Constantia — Coastal Conversion into 8 Luxury Apartments",
         tag: "East Runton",
         beforeImg: "images/consbefore.webp",
         afterImg: "images/consafter.webp",
-        description: "Conversion of this former restaurant into eight luxury apartments"
+        description: "Major structural conversion of the former Constantia restaurant in East Runton into eight self-contained luxury coastal apartments."
       },
       {
         id: 6,
-        title: "HARDWOOD KNOWL - CROMER",
+        title: "Harwood Knowl — Commercial Groundworks & Car Park Construction",
         tag: "Cromer",
         beforeImg: "images/hkbefore.webp",
         afterImg: "images/hkafter.webp",
-        description: "Landscape transformation of this area of waste land into a useable car park"
+        description: "Complete groundworks, excavation, drainage, and surfacing transformation of overgrown wasteland at Harwood Knowl in Cromer into a durable car park."
       }
     ];
 
@@ -2709,69 +2815,171 @@ ${plans}
     const oakwoodProjects = [
       {
         id: "hindolveston-ext",
-        title: "Hindolveston Extension",
-        tag: "Two-Storey Extension & Orangery",
+        title: "Hindolveston Two-Storey Extension, Orangery & Full Renovation",
+        tag: "Two-Storey Rear Extension & Bespoke Orangery",
+        category: "Two-Storey Rear Extension & Bespoke Orangery",
         town: "Hindolveston",
-        desc: "Two-storey rear extension with orangery and full house renovation.",
+        location: "Hindolveston, North Norfolk (near Holt & Fakenham)",
+        architect: "Leon Morris",
+        teaser: "Substantial two-storey rear extension, glazed orangery, and full period property renovation in Hindolveston, North Norfolk.",
+        desc: "Substantial two-storey rear extension, glazed orangery, and full period property renovation in Hindolveston, North Norfolk.",
+        fullCaseStudy: [
+          "Working closely with local architectural designer Leon Morris, Oakwood Building Services (Norfolk) Ltd delivered this substantial two-storey rear extension, bespoke orangery, and complete house renovation in the North Norfolk village of Hindolveston.",
+          "The project required extensive groundworks, structural steelwork, and sympathetic brickwork matching so the new two-storey addition blended seamlessly with the character of the original property. Alongside the light-filled orangery—designed for year-round open-plan kitchen and dining living—Greg Hann and the Oakwood team managed the full internal refurbishment of the main house, including roofing, plastering, plumbing, electrics, and full Building Control sign-off."
+        ],
+        highlights: [
+          "Two-storey rear house extension built to Leon Morris architectural plans",
+          "Bespoke glazed orangery with high-spec thermal & structural glazing",
+          "Sympathetic North Norfolk brickwork, roofing & tie-ins to the original home",
+          "Turnkey internal renovation, M&E (plumbing/electrical) & Building Control sign-off"
+        ],
+        beforeImg: "images/beforehindolveston.webp",
         image: "images/afterhindolveston.webp",
         coords: [52.8333, 1.0500],
-        duration: "14 Weeks",
-        management: "Full Project Management"
+        duration: "Turnkey Build",
+        management: "Leon Morris Architect"
       },
       {
         id: "sheringham-rise",
-        title: "The Rise",
-        tag: "Two-Storey Extension & Renovation",
+        title: "11 The Rise — Detached Home Extension & Renovation in Sheringham",
+        tag: "Two-Storey Extension, Refurbishment & Landscaping",
+        category: "Two-Storey Extension, Full Refurbishment & Landscaping",
         town: "Sheringham",
-        desc: "Empty 3-bed detached home extended to 4 bedrooms with full internal finish and landscaping.",
+        location: "The Rise, Sheringham, North Norfolk",
+        architect: "Mr A. Griggs & Mr L. Morris",
+        teaser: "Complete transformation of an empty 3-bed detached house in Sheringham into a spacious 4-bedroom coastal family home.",
+        desc: "Complete transformation of an empty 3-bed detached house in Sheringham into a spacious 4-bedroom coastal family home.",
+        fullCaseStudy: [
+          "Working from architectural plans by Mr A. Griggs and Mr L. Morris, Oakwood Building Services transformed 11 The Rise in Sheringham from a dated, empty three-bedroom detached property into a modern, energy-efficient four-bedroom family home.",
+          "Our North Norfolk building team constructed a substantial two-storey rear extension to expand both the ground-floor living footprint and first-floor bedroom accommodation. Simultaneously, we stripped back and renovated the existing house from top to bottom—installing modern heating, electrical wiring, bespoke kitchen and bathroom suites, new glazing, and complete hard and soft landscaping across the front driveway and rear garden."
+        ],
+        highlights: [
+          "3-bedroom to 4-bedroom detached home expansion in Sheringham",
+          "Two-storey rear extension delivered with architects A. Griggs & L. Morris",
+          "Full structural alterations, re-plastering, plumbing, heating & rewire",
+          "Complete front driveway and rear garden hard landscaping"
+        ],
+        review: {
+          quote: "Oakwood Building Services have renovated and extended two residential properties for me over the last five years. They provided complete and accurate estimates for the projects, then worked well with the architects, structural engineers and building control. Greg kept me well informed throughout the projects and provided good advice when required. Where an extra cost arose due to a change in scope it was identified in advance, then priced clearly and fairly. The OBS team of tradespeople were professional, knowledgeable and polite. I have been very happy with the quality of the work.",
+          author: "Simon Allen (Google Verified Review)"
+        },
+        beforeImg: "images/risebefore.webp",
         image: "images/riseafter.webp",
         coords: [52.9431, 1.2104],
-        duration: "12 Weeks",
-        management: "Turnkey Management"
-      },
-      {
-        id: "cromer-norwich-rd",
-        title: "Norwich Road",
-        tag: "Conversion & Extension",
-        town: "Cromer",
-        desc: "Full conversion plus addition of an extension to a residential property.",
-        image: "images/norwichroadafter.webp",
-        coords: [52.9312, 1.2989],
-        duration: "12 Weeks",
-        management: "Conversion & Extension"
+        duration: "4-Bed Expansion",
+        management: "Griggs & Morris Architects"
       },
       {
         id: "cromer-roughton-rd",
-        title: "Roughton Road",
-        tag: "Bungalow Remodel",
+        title: "Roughton Road — 1950s Bungalow Extension & Modernisation in Cromer",
+        tag: "Bungalow Extension & Complete Refurbishment",
+        category: "Bungalow Extension & Complete Refurbishment",
         town: "Cromer",
-        desc: "1950s bungalow transformation creating light, open interiors and high kerb appeal.",
+        location: "Roughton Road, Cromer, North Norfolk",
+        architect: "Oakwood Design & Build",
+        teaser: "Full extension, internal reconfiguration, and kerb-appeal exterior overhaul of a 1950s bungalow on Roughton Road, Cromer.",
+        desc: "Full extension, internal reconfiguration, and kerb-appeal exterior overhaul of a 1950s bungalow on Roughton Road, Cromer.",
+        fullCaseStudy: [
+          "Bungalow renovations and extensions are among the most popular home improvements in Cromer and along the North Norfolk coast. On Roughton Road in Cromer, Oakwood Building Services (Norfolk) Ltd carried out a complete structural extension, internal reconfiguration, and full modernisation of a 1950s detached bungalow.",
+          "Led by Greg Hann, our multi-trade team removed dark, compartmentalised layouts to create a bright, airy open-plan living space with modern thermal insulation, new windows, and updated plumbing and electrics. Externally, high-durability rendering, crisp brickwork, and roofing upgrades dramatically enhanced the property's kerb appeal—delivered on time and on budget."
+        ],
+        highlights: [
+          "Complete 1950s bungalow extension & structural remodelling in Cromer",
+          "Load-bearing wall removals for light-filled, open-plan interior living",
+          "High-specification exterior finishes, glazing & kerb-appeal upgrade",
+          "Fully managed turnkey build delivered on schedule and on budget"
+        ],
+        review: {
+          quote: "Oakwood Building Services (Norfolk) Ltd carried out a complete renovation, extension and updating of our 1950s bungalow. From the moment we met Greg Hann we felt we were in good hands. His experienced team covered every aspect of the project and we have been delighted with the outcome, achieved on time and on budget. All this was carried out at a very sensitive and difficult time for us as my wife was diagnosed with cancer during the build. We would have no hesitation in recommending Oakwood Building Services.",
+          author: "Penny & David Miles (Google Verified Review)"
+        },
+        beforeImg: "images/rrbefore.webp",
         image: "images/rrafter.webp",
         coords: [52.9230, 1.2940],
-        duration: "10 Weeks",
-        management: "Full Remodel"
+        duration: "Full Remodel",
+        management: "On Time & On Budget"
+      },
+      {
+        id: "cromer-norwich-rd",
+        title: "Norwich Road — Property Conversion & Bespoke Extension in Cromer",
+        tag: "Property Conversion & Home Extension",
+        category: "Property Conversion & Home Extension",
+        town: "Cromer",
+        location: "Norwich Road, Cromer, North Norfolk",
+        architect: "Oakwood Architectural Team",
+        teaser: "High-specification property conversion and bespoke extension on Norwich Road, Cromer, combining structural alterations with modern design.",
+        desc: "High-specification property conversion and bespoke extension on Norwich Road, Cromer, combining structural alterations with modern design.",
+        fullCaseStudy: [
+          "Located on Norwich Road in Cromer, this project combined a comprehensive residential property conversion with the construction of a bespoke home extension. Oakwood Building Services managed the entire build from initial groundworks and structural steel installation through to fine internal carpentry, plastering, and decorating.",
+          "Drawing on our experience across high-end residential builds in North Norfolk, our tradesmen advised on durable materials, spatial flow, and natural lighting to maximise both everyday liveability and long-term property value while meeting all North Norfolk District Council Building Control standards."
+        ],
+        highlights: [
+          "Full residential property conversion & bespoke extension on Norwich Road, Cromer",
+          "Structural steelwork, foundations, roofing & insulated cavity masonry",
+          "Bespoke internal joinery, plastering, kitchens, bathrooms & tiling",
+          "Full project management and North Norfolk Building Control compliance"
+        ],
+        review: {
+          quote: "Highly recommended. They know building and have excellent, knowledgeable trades in all aspects of building work. They have experience of high-end builds that will benefit smaller projects with both materials and design ideas. First-class service.",
+          author: "Andrew Raby (Google Verified Review)"
+        },
+        beforeImg: "images/norwichroadbefore.webp",
+        image: "images/norwichroadafter.webp",
+        coords: [52.9312, 1.2989],
+        duration: "Full Conversion",
+        management: "Building Control Compliant"
       },
       {
         id: "east-runton-constantia",
-        title: "The Constantia",
-        tag: "Apartment Conversion",
+        title: "The Constantia — Coastal Conversion into 8 Luxury Apartments",
+        tag: "Commercial-to-Residential Multi-Unit Conversion",
+        category: "Commercial-to-Residential Multi-Unit Conversion",
         town: "East Runton",
-        desc: "Conversion of former restaurant into eight luxury residential apartments.",
+        location: "East Runton (between Cromer & Sheringham), North Norfolk",
+        architect: "Oakwood Commercial Projects",
+        teaser: "Major structural conversion of the former Constantia restaurant in East Runton into eight self-contained luxury coastal apartments.",
+        desc: "Major structural conversion of the former Constantia restaurant in East Runton into eight self-contained luxury coastal apartments.",
+        fullCaseStudy: [
+          "Demonstrating Oakwood Building Services' capability on large-scale commercial and multi-unit residential developments, we undertook the complete conversion of the former Constantia restaurant in East Runton on the North Norfolk coast into eight high-specification luxury apartments.",
+          "Multi-dwelling coastal conversions demand rigorous structural engineering, acoustic soundproofing, fire safety partitioning, and weather-resistant exterior finishes. Our team coordinated every trade discipline on site—from structural reconfiguration and window installations to eight complete sets of kitchens, bathrooms, heating systems, and certified electrical installations."
+        ],
+        highlights: [
+          "Major conversion of former East Runton restaurant into 8 luxury apartments",
+          "Structural reconfiguration, fire compartmentalisation & acoustic insulation",
+          "Multi-unit plumbing, heating, electrical, kitchen & bathroom fit-outs",
+          "Coastal-grade external refurbishment & full regulatory sign-off"
+        ],
+        beforeImg: "images/consbefore.webp",
         image: "images/consafter.webp",
         coords: [52.9360, 1.2630],
-        duration: "16 Weeks",
-        management: "Luxury Conversion"
+        duration: "8 Luxury Units",
+        management: "Commercial Conversion"
       },
       {
         id: "cromer-hardwood-knowl",
-        title: "Hardwood Knowl",
-        tag: "Landscaping",
+        title: "Harwood Knowl — Commercial Groundworks & Car Park Construction",
+        tag: "Civil Groundworks, Drainage & Hard Landscaping",
+        category: "Civil Groundworks, Drainage & Hard Landscaping",
         town: "Cromer",
-        desc: "Landscaping transformation of wasteland into a clean, functional space.",
+        location: "Harwood Knowl, Cromer, North Norfolk",
+        architect: "Oakwood Groundworks Division",
+        teaser: "Complete groundworks, excavation, drainage, and surfacing transformation of overgrown wasteland in Cromer into a durable car park.",
+        desc: "Complete groundworks, excavation, drainage, and surfacing transformation of overgrown wasteland in Cromer into a durable car park.",
+        fullCaseStudy: [
+          "Alongside residential extensions and conversions, Oakwood Building Services (Norfolk) Ltd carries out heavy groundworks, site preparation, and hard landscaping across Cromer and North Norfolk. At Harwood Knowl in Cromer, we transformed an overgrown, uneven parcel of wasteland into a clean, well-drained, and hard-wearing car park.",
+          "The works involved full site clearance, mechanical excavation, levels grading, heavy-duty sub-base compaction, surface water drainage, kerbing, and durable surfacing—delivering a practical, low-maintenance asset built to withstand daily vehicular traffic."
+        ],
+        highlights: [
+          "Site clearance, excavation & earthworks at Harwood Knowl, Cromer",
+          "Engineered Type 1 sub-base compaction & surface water drainage",
+          "Perimeter kerbing, boundary treatments & heavy-duty car park surfacing",
+          "Turnkey residential & commercial groundworks across North Norfolk"
+        ],
+        beforeImg: "images/hkbefore.webp",
         image: "images/hkafter.webp",
         coords: [52.9280, 1.3020],
-        duration: "4 Weeks",
-        management: "Groundworks & Paving"
+        duration: "Groundworks",
+        management: "Civil & Landscaping"
       }
     ];
 
@@ -2834,10 +3042,10 @@ ${plans}
           <div class="p-1 max-w-[220px]">
             <img src="${proj.image}" alt="${proj.title}" loading="lazy" decoding="async" class="w-full h-24 object-cover rounded-lg mb-2" onerror="this.onerror=null; this.src='https://placehold.co/400x250/153460/fff?text=${encodeURIComponent(proj.title)}';" />
             <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-navy-100 text-navy-900 mb-1">${proj.town}</span>
-            <h4 class="font-bold text-navy-900 text-sm leading-tight">${proj.title}</h4>
-            <p class="text-stone-600 text-xs mt-1 leading-snug">${proj.desc}</p>
-            <button type="button" onclick="scrollToProjectCard('${proj.id}')" class="mt-3 w-full py-1.5 px-3 bg-navy-900 text-white font-semibold text-xs rounded-lg hover:bg-gold-600 hover:text-navy-950 transition duration-200 text-center block">
-              View Case Study &rarr;
+            <h4 class="font-bold text-navy-900 text-xs leading-tight line-clamp-2">${proj.title}</h4>
+            <p class="text-stone-600 text-[11px] mt-1 leading-snug line-clamp-2">${proj.teaser || proj.desc}</p>
+            <button type="button" onclick="openProjectModal('${proj.id}')" class="mt-3 w-full py-1.5 px-3 bg-navy-900 text-white font-semibold text-xs rounded-lg hover:bg-gold-600 hover:text-navy-950 transition duration-200 text-center block">
+              View Full Case Study &rarr;
             </button>
           </div>
         `;
@@ -2852,6 +3060,105 @@ ${plans}
       renderProjectCards(oakwoodProjects);
       setupTownFilterListeners();
     }
+
+    // Project Case Study Modal Logic
+    let currentProject = null;
+
+    const projectModal = document.getElementById('project-modal');
+    const projectModalBackdrop = document.getElementById('project-modal-backdrop');
+    const projectModalClose = document.getElementById('project-modal-close');
+    const pmCategory = document.getElementById('pm-category');
+    const pmTown = document.getElementById('pm-town');
+    const pmTitle = document.getElementById('pm-title');
+    const pmAfterImg = document.getElementById('pm-after-img');
+    const pmBeforeImg = document.getElementById('pm-before-img');
+    const pmLocation = document.getElementById('pm-location');
+    const pmCategoryDd = document.getElementById('pm-category-dd');
+    const pmArchitect = document.getElementById('pm-architect');
+    const pmFullText = document.getElementById('pm-full-text');
+    const pmHighlights = document.getElementById('pm-highlights');
+    const pmReviewContainer = document.getElementById('pm-review-container');
+    const pmReviewQuote = document.getElementById('pm-review-quote');
+    const pmReviewAuthor = document.getElementById('pm-review-author');
+    const pmQuoteBtn = document.getElementById('pm-quote-btn');
+
+    function openProjectModal(projectId) {
+      const proj = oakwoodProjects.find(p => p.id === projectId);
+      if (!proj) return;
+      currentProject = proj;
+
+      pmCategory.textContent = proj.category;
+      pmTown.textContent = proj.town;
+      pmTitle.textContent = proj.title;
+
+      pmAfterImg.src = proj.image;
+      pmAfterImg.alt = "After - " + proj.title;
+
+      pmBeforeImg.src = proj.beforeImg || proj.image;
+      pmBeforeImg.alt = "Before - " + proj.title;
+
+      pmLocation.textContent = proj.location;
+      pmCategoryDd.textContent = proj.category;
+      pmArchitect.textContent = proj.architect;
+
+      pmFullText.innerHTML = proj.fullCaseStudy.map(p => `<p>${p}</p>`).join('');
+
+      pmHighlights.innerHTML = proj.highlights.map(h => `
+        <li class="flex items-start gap-2">
+          <span class="text-gold-400 font-bold shrink-0">✓</span>
+          <span>${h}</span>
+        </li>
+      `).join('');
+
+      if (proj.review) {
+        pmReviewQuote.textContent = `"${proj.review.quote}"`;
+        pmReviewAuthor.textContent = `— ${proj.review.author}`;
+        pmReviewContainer.classList.remove('hidden');
+      } else {
+        pmReviewContainer.classList.add('hidden');
+      }
+
+      projectModal.classList.remove('hidden');
+      setTimeout(() => {
+        projectModal.classList.remove('opacity-0');
+        projectModal.querySelector('.transform').classList.remove('scale-95');
+        projectModal.querySelector('.transform').classList.add('scale-100');
+      }, 10);
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      projectModal.classList.add('opacity-0');
+      if (projectModal.querySelector('.transform')) {
+        projectModal.querySelector('.transform').classList.remove('scale-100');
+        projectModal.querySelector('.transform').classList.add('scale-95');
+      }
+      setTimeout(() => {
+        projectModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    if (projectModalClose) projectModalClose.addEventListener('click', closeProjectModal);
+    if (projectModalBackdrop) projectModalBackdrop.addEventListener('click', closeProjectModal);
+
+    if (pmQuoteBtn) {
+      pmQuoteBtn.addEventListener('click', () => {
+        closeProjectModal();
+        goToStep(1);
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (projectModal && !projectModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeProjectModal();
+      }
+    });
 
     function renderProjectCards(projectsToRender) {
       const cardsGrid = document.getElementById('project-cards-grid');
@@ -2870,31 +3177,44 @@ ${plans}
       }
 
       cardsGrid.innerHTML = projectsToRender.map(proj => `
-        <article id="card-${proj.id}" class="project-card-item bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between cursor-pointer group" onclick="focusMapMarker('${proj.id}')">
+        <article id="card-${proj.id}" itemscope itemtype="https://schema.org/CreativeWork" class="project-card-item bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-md hover:shadow-xl transition duration-300 flex flex-col justify-between cursor-pointer group" onclick="openProjectModal('${proj.id}')">
           <div>
             <div class="h-56 overflow-hidden relative bg-stone-200">
-              <img src="${proj.image}" alt="${proj.title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=${encodeURIComponent(proj.title)}';" />
+              <img src="${proj.image}" alt="${proj.title}" itemprop="image" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/153460/fff?text=${encodeURIComponent(proj.title)}';" />
               <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-60"></div>
-              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm" itemprop="location">
                 ${proj.town}
               </span>
               <span class="absolute top-3 right-3 bg-gold-600 text-navy-950 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">
-                ${proj.tag}
+                ${proj.town}
               </span>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between">
-                <span>${proj.title}</span>
-                <svg class="w-5 h-5 text-gold-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <div class="text-[11px] font-bold text-gold-600 uppercase tracking-wider mb-1">${proj.category}</div>
+              <h3 class="text-lg font-bold text-navy-900 group-hover:text-gold-600 transition flex items-center justify-between" itemprop="name">
+                <span class="line-clamp-2">${proj.title}</span>
+                <svg class="w-5 h-5 text-gold-600 shrink-0 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </h3>
-              <p class="text-stone-600 text-sm mt-2 leading-relaxed">
-                ${proj.desc}
+              <p class="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed" itemprop="description">
+                ${proj.teaser || proj.desc}
               </p>
+              <dl class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500 space-y-1">
+                <div class="flex justify-between">
+                  <dt class="font-semibold text-stone-700">Location:</dt>
+                  <dd class="text-stone-600 truncate max-w-[170px]">${proj.location}</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="font-semibold text-stone-700">Architect:</dt>
+                  <dd class="text-stone-600 truncate max-w-[170px]">${proj.architect}</dd>
+                </div>
+              </dl>
             </div>
           </div>
-          <div class="px-6 pb-6 pt-3 border-t border-stone-100 flex justify-between items-center text-xs text-stone-500">
-            <span class="font-medium text-stone-600">${proj.duration}</span>
-            <span class="text-gold-600 font-bold">${proj.management}</span>
+          <div class="px-6 pb-5 pt-2 border-t border-stone-100">
+            <button type="button" class="w-full py-2.5 px-4 bg-stone-100 group-hover:bg-navy-900 text-stone-700 group-hover:text-white font-semibold text-xs rounded-xl transition flex items-center justify-center gap-2">
+              <span>Read Full Case Study</span>
+              <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </article>
       `).join('');
