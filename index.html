@@ -1043,7 +1043,7 @@
         <div data-service="underfloor_heating" class="service-card cursor-pointer group w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-gold-500 shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
           <div>
             <div class="h-52 overflow-hidden bg-stone-100 relative">
-              <img src="images/service-renovations.webp" alt="Underfloor heating installation" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              <img src="images/service-ufh.webp" alt="Underfloor heating installation" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/stone/white?text=Underfloor+Heating';"
               />
               <span class="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-semibold px-2.5 py-1 rounded shadow-sm">
@@ -1766,20 +1766,40 @@
           </h2>
         </div>
 
-        <!-- Before / After Images Gallery Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div class="relative rounded-2xl overflow-hidden bg-navy-900 border border-white/10 h-56 sm:h-64 group">
-            <img id="pm-after-img" src="" alt="Completed Work" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" itemprop="image" />
-            <span class="absolute top-3 left-3 bg-navy-900/90 backdrop-blur text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
-              After: Completed
-            </span>
+        <!-- Project Image Carousel Area -->
+        <div class="relative rounded-2xl overflow-hidden bg-stone-950 border border-white/10 shadow-inner mb-3 group">
+          <div id="pm-carousel-slides" class="relative h-64 sm:h-80 md:h-96 w-full flex items-center justify-center bg-stone-950">
+            <img id="pm-carousel-img" src="" alt="" loading="lazy" decoding="async" class="w-full h-full object-contain transition-all duration-500" itemprop="image" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-black/20 pointer-events-none"></div>
+
+            <!-- Image Caption & Counter -->
+            <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4 text-xs z-10">
+              <p id="pm-carousel-caption" class="text-stone-200 font-medium bg-navy-950/80 backdrop-blur px-3 py-1.5 rounded-lg border border-white/10 max-w-[75%] truncate">
+                Project Image
+              </p>
+              <span id="pm-carousel-counter" class="text-gold-400 font-bold bg-navy-950/80 backdrop-blur px-3 py-1.5 rounded-lg border border-gold-500/30">
+                1 / 1
+              </span>
+            </div>
           </div>
-          <div class="relative rounded-2xl overflow-hidden bg-navy-900 border border-white/10 h-56 sm:h-64 group">
-            <img id="pm-before-img" src="" alt="Before Work" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <span class="absolute top-3 left-3 bg-gold-600/95 backdrop-blur text-navy-950 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow">
-              Before Work
-            </span>
+
+          <!-- Carousel Navigation Controls -->
+          <button id="pm-carousel-prev" type="button" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy-950/70 hover:bg-gold-500 text-white hover:text-navy-950 border border-white/20 flex items-center justify-center transition shadow-lg backdrop-blur focus:outline-none z-10" aria-label="Previous image">
+            &#10094;
+          </button>
+          <button id="pm-carousel-next" type="button" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy-950/70 hover:bg-gold-500 text-white hover:text-navy-950 border border-white/20 flex items-center justify-center transition shadow-lg backdrop-blur focus:outline-none z-10" aria-label="Next image">
+            &#10095;
+          </button>
+
+          <!-- Carousel Dot Indicators -->
+          <div id="pm-carousel-dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10">
+            <!-- Dots generated dynamically by JS -->
           </div>
+        </div>
+
+        <!-- Thumbnail Navigation Strip -->
+        <div id="pm-thumbnails" class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 custom-scrollbar">
+          <!-- Thumbnails injected by JS -->
         </div>
 
         <!-- Metadata Definition List (Semantic HTML for Search & AI Crawlers) -->
@@ -1867,11 +1887,11 @@
       </div>
 
       <!-- Carousel Section -->
-      <div class="relative rounded-2xl overflow-hidden bg-navy-900/90 border border-white/10 shadow-inner mb-6 group">
-        <div id="carousel-slides" class="relative h-64 sm:h-80 md:h-96 w-full">
+      <div class="relative rounded-2xl overflow-hidden bg-stone-950 border border-white/10 shadow-inner mb-6 group">
+        <div id="carousel-slides" class="relative h-64 sm:h-80 md:h-96 w-full flex items-center justify-center bg-stone-950">
           <!-- Slide Image injected by JS -->
-          <img id="carousel-img" src="" alt="" loading="lazy" decoding="async" class="w-full h-full object-cover transition-all duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-black/20"></div>
+          <img id="carousel-img" src="" alt="" loading="lazy" decoding="async" class="w-full h-full object-contain transition-all duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-black/20 pointer-events-none"></div>
 
           <!-- Image Caption & Counter -->
           <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4 text-xs">
@@ -2237,11 +2257,10 @@
         ],
         proof: "Proven on projects including our two-storey rear extension and orangery in Hindolveston and our detached family home extension at 11 The Rise, Sheringham.",
         gallery: [
-          { url: "images/service-extensions.webp", caption: "Extensions project photo 1" },
-          { url: "images/service-extensions-2.webp", caption: "Extensions project photo 2" },
-          { url: "images/extension1.webp", caption: "Extensions project photo 3" },
-          { url: "images/extension2.webp", caption: "Extensions project photo 4" },
-          { url: "images/extension3.webp", caption: "Extensions project photo 5" }
+          { url: "images/extension1.webp", caption: "Extensions project photo 1" },
+          { url: "images/extension2.webp", caption: "Extensions project photo 2" },
+          { url: "images/extension3.webp", caption: "Extensions project photo 3" },
+          { url: "images/service-extensions-2.webp", caption: "Extensions project photo 4" }
         ]
       },
       conversions: {
@@ -2259,14 +2278,11 @@
         ],
         proof: "Proven on our conversion and extension on Norwich Road, Cromer, a care home roof-space en-suite conversion in Cromer, and the conversion of The Constantia in East Runton into eight luxury apartments.",
         gallery: [
-          { url: "images/service-conversions.webp", caption: "Conversions project photo 1" },
-          { url: "images/service-conversions-2.webp", caption: "Conversions project photo 2" },
-          { url: "images/service-conversions-3.webp", caption: "Conversions project photo 3" },
-          { url: "images/service-conversions-4.webp", caption: "Conversions project photo 4" },
-          { url: "images/conversions-1.webp", caption: "Conversions project photo 5" },
-          { url: "images/conversions-2.webp", caption: "Conversions project photo 6" },
-          { url: "images/conversions-3.webp", caption: "Conversions project photo 7" },
-          { url: "images/conversions-4.webp", caption: "Conversions project photo 8" }
+          { url: "images/conversions.webp", caption: "Conversions project photo 1" },
+          { url: "images/conversions-1.webp", caption: "Conversions project photo 2" },
+          { url: "images/conversions-2.webp", caption: "Conversions project photo 3" },
+          { url: "images/conversions-3.webp", caption: "Conversions project photo 4" },
+          { url: "images/conversions-4.webp", caption: "Conversions project photo 5" }
         ]
       },
       renovations: {
@@ -2964,7 +2980,20 @@ ${plans}
         ],
         beforeImg: "images/beforehindolveston.webp",
         image: "images/afterhindolveston.webp",
-        images: ["images/project-hindolveston.webp", "images/project-hindolveston-2.webp", "images/project-hindolveston-3.webp", "images/project-hindolveston-4.webp", "images/project-hindolveston-5.webp", "images/project-hindolveston-6.webp", "images/project-hindolveston-7.webp", "images/project-hindolveston-8.webp", "images/project-hindolveston-9.webp", "images/project-hindolveston-10.webp"],
+        gallery: [
+          { url: "images/afterhindolveston.webp", caption: "Completed Work - Hindolveston Extension & Orangery" },
+          { url: "images/beforehindolveston.webp", caption: "Before Work - Original Property Prior to Extension" },
+          { url: "images/project-hindolveston.webp", caption: "Hindolveston Project Photo 1" },
+          { url: "images/project-hindolveston-2.webp", caption: "Hindolveston Project Photo 2" },
+          { url: "images/project-hindolveston-3.webp", caption: "Hindolveston Project Photo 3" },
+          { url: "images/project-hindolveston-4.webp", caption: "Hindolveston Project Photo 4" },
+          { url: "images/project-hindolveston-5.webp", caption: "Hindolveston Project Photo 5" },
+          { url: "images/project-hindolveston-6.webp", caption: "Hindolveston Project Photo 6" },
+          { url: "images/project-hindolveston-7.webp", caption: "Hindolveston Project Photo 7" },
+          { url: "images/project-hindolveston-8.webp", caption: "Hindolveston Project Photo 8" },
+          { url: "images/project-hindolveston-9.webp", caption: "Hindolveston Project Photo 9" },
+          { url: "images/project-hindolveston-10.webp", caption: "Hindolveston Project Photo 10" }
+        ],
         coords: [52.8333, 1.0500],
         duration: "Turnkey Build",
         management: "Leon Morris Architect"
@@ -2995,6 +3024,16 @@ ${plans}
         },
         beforeImg: "images/risebefore.webp",
         image: "images/riseafter.webp",
+        gallery: [
+          { url: "images/riseafter.webp", caption: "Completed Work - 11 The Rise Extension & Landscaping" },
+          { url: "images/risebefore.webp", caption: "Before Work - Original Detached House" },
+          { url: "images/project-therise.webp", caption: "11 The Rise Photo 1" },
+          { url: "images/project-therise-2.webp", caption: "11 The Rise Photo 2" },
+          { url: "images/project-therise-3.webp", caption: "11 The Rise Photo 3" },
+          { url: "images/project-therise-4.webp", caption: "11 The Rise Photo 4" },
+          { url: "images/project-therise-5.webp", caption: "11 The Rise Photo 5" },
+          { url: "images/project-therise-6.webp", caption: "11 The Rise Photo 6" }
+        ],
         coords: [52.9431, 1.2104],
         duration: "4-Bed Expansion",
         management: "Griggs & Morris Architects"
@@ -3025,6 +3064,10 @@ ${plans}
         },
         beforeImg: "images/rrbefore.webp",
         image: "images/rrafter.webp",
+        gallery: [
+          { url: "images/rrafter.webp", caption: "Completed Work - Roughton Road Modernisation" },
+          { url: "images/rrbefore.webp", caption: "Before Work - 1950s Bungalow Prior to Build" }
+        ],
         coords: [52.9230, 1.2940],
         duration: "Full Remodel",
         management: "On Time & On Budget"
@@ -3055,6 +3098,16 @@ ${plans}
         },
         beforeImg: "images/norwichroadbefore.webp",
         image: "images/norwichroadafter.webp",
+        gallery: [
+          { url: "images/norwichroadafter.webp", caption: "Completed Work - Norwich Road Conversion & Extension" },
+          { url: "images/norwichroadbefore.webp", caption: "Before Work - Original Property Structure" },
+          { url: "images/project-norwichroad.webp", caption: "Norwich Road Photo 1" },
+          { url: "images/project-norwichroad-2.webp", caption: "Norwich Road Photo 2" },
+          { url: "images/project-norwichroad-3.webp", caption: "Norwich Road Photo 3" },
+          { url: "images/project-norwichroad-4.webp", caption: "Norwich Road Photo 4" },
+          { url: "images/project-norwichroad-5.webp", caption: "Norwich Road Photo 5" },
+          { url: "images/project-norwichroad-6.webp", caption: "Norwich Road Photo 6" }
+        ],
         coords: [52.9312, 1.2989],
         duration: "Full Conversion",
         management: "Building Control Compliant"
@@ -3081,6 +3134,10 @@ ${plans}
         ],
         beforeImg: "images/consbefore.webp",
         image: "images/consafter.webp",
+        gallery: [
+          { url: "images/consafter.webp", caption: "Completed Work - The Constantia Apartments" },
+          { url: "images/consbefore.webp", caption: "Before Work - Former Constantia Restaurant" }
+        ],
         coords: [52.9360, 1.2630],
         duration: "8 Luxury Units",
         management: "Commercial Conversion"
@@ -3107,6 +3164,10 @@ ${plans}
         ],
         beforeImg: "images/hkbefore.webp",
         image: "images/hkafter.webp",
+        gallery: [
+          { url: "images/hkafter.webp", caption: "Completed Work - Harwood Knowl Car Park" },
+          { url: "images/hkbefore.webp", caption: "Before Work - Wasteland Prior to Groundworks" }
+        ],
         coords: [52.9280, 1.3020],
         duration: "Groundworks",
         management: "Civil & Landscaping"
@@ -3191,8 +3252,9 @@ ${plans}
       setupTownFilterListeners();
     }
 
-    // Project Case Study Modal Logic
+    // Project Case Study Modal & Carousel Logic
     let currentProject = null;
+    let currentPmImageIndex = 0;
 
     const projectModal = document.getElementById('project-modal');
     const projectModalBackdrop = document.getElementById('project-modal-backdrop');
@@ -3200,8 +3262,6 @@ ${plans}
     const pmCategory = document.getElementById('pm-category');
     const pmTown = document.getElementById('pm-town');
     const pmTitle = document.getElementById('pm-title');
-    const pmAfterImg = document.getElementById('pm-after-img');
-    const pmBeforeImg = document.getElementById('pm-before-img');
     const pmLocation = document.getElementById('pm-location');
     const pmCategoryDd = document.getElementById('pm-category-dd');
     const pmArchitect = document.getElementById('pm-architect');
@@ -3212,20 +3272,91 @@ ${plans}
     const pmReviewAuthor = document.getElementById('pm-review-author');
     const pmQuoteBtn = document.getElementById('pm-quote-btn');
 
+    const pmCarouselImg = document.getElementById('pm-carousel-img');
+    const pmCarouselCaption = document.getElementById('pm-carousel-caption');
+    const pmCarouselCounter = document.getElementById('pm-carousel-counter');
+    const pmCarouselPrev = document.getElementById('pm-carousel-prev');
+    const pmCarouselNext = document.getElementById('pm-carousel-next');
+    const pmCarouselDots = document.getElementById('pm-carousel-dots');
+    const pmThumbnails = document.getElementById('pm-thumbnails');
+
+    function updatePmCarousel() {
+      if (!currentProject) return;
+      const gallery = currentProject.gallery || [];
+      if (gallery.length === 0) return;
+
+      if (currentPmImageIndex < 0) currentPmImageIndex = gallery.length - 1;
+      if (currentPmImageIndex >= gallery.length) currentPmImageIndex = 0;
+
+      const currentItem = gallery[currentPmImageIndex];
+
+      pmCarouselImg.style.opacity = '0.4';
+      setTimeout(() => {
+        pmCarouselImg.src = currentItem.url;
+        pmCarouselImg.alt = currentItem.caption;
+        pmCarouselCaption.textContent = currentItem.caption;
+        pmCarouselCounter.textContent = `${currentPmImageIndex + 1} / ${gallery.length}`;
+        pmCarouselImg.style.opacity = '1';
+      }, 150);
+
+      pmCarouselDots.innerHTML = gallery.map((_, i) => `
+        <button type="button" class="w-2.5 h-2.5 rounded-full transition ${i === currentPmImageIndex ? 'bg-gold-400 w-6' : 'bg-white/40 hover:bg-white/70'}" data-pmdot="${i}" aria-label="Go to project slide ${i+1}"></button>
+      `).join('');
+
+      pmCarouselDots.querySelectorAll('button').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          currentPmImageIndex = parseInt(e.currentTarget.getAttribute('data-pmdot'), 10);
+          updatePmCarousel();
+        });
+      });
+
+      renderPmThumbnails();
+    }
+
+    function renderPmThumbnails() {
+      if (!pmThumbnails || !currentProject) return;
+      const gallery = currentProject.gallery || [];
+      pmThumbnails.innerHTML = gallery.map((item, idx) => {
+        const isActive = idx === currentPmImageIndex;
+        return `
+          <button type="button" class="shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden border-2 transition duration-200 bg-stone-900 ${
+            isActive ? 'border-gold-400 ring-2 ring-gold-400/50 scale-105' : 'border-white/20 opacity-70 hover:opacity-100 hover:border-white'
+          }" data-pmthumb="${idx}">
+            <img src="${item.url}" alt="${item.caption}" loading="lazy" class="w-full h-full object-cover" />
+          </button>
+        `;
+      }).join('');
+
+      pmThumbnails.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          currentPmImageIndex = parseInt(e.currentTarget.getAttribute('data-pmthumb'), 10);
+          updatePmCarousel();
+        });
+      });
+    }
+
+    if (pmCarouselPrev && pmCarouselNext) {
+      pmCarouselPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentPmImageIndex--;
+        updatePmCarousel();
+      });
+      pmCarouselNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentPmImageIndex++;
+        updatePmCarousel();
+      });
+    }
+
     function openProjectModal(projectId) {
       const proj = oakwoodProjects.find(p => p.id === projectId);
       if (!proj) return;
       currentProject = proj;
+      currentPmImageIndex = 0;
 
       pmCategory.textContent = proj.category;
       pmTown.textContent = proj.town;
       pmTitle.textContent = proj.title;
-
-      pmAfterImg.src = proj.image;
-      pmAfterImg.alt = "After - " + proj.title;
-
-      pmBeforeImg.src = proj.beforeImg || proj.image;
-      pmBeforeImg.alt = "Before - " + proj.title;
 
       pmLocation.textContent = proj.location;
       pmCategoryDd.textContent = proj.category;
@@ -3247,6 +3378,8 @@ ${plans}
       } else {
         pmReviewContainer.classList.add('hidden');
       }
+
+      updatePmCarousel();
 
       projectModal.classList.remove('hidden');
       setTimeout(() => {
@@ -3287,6 +3420,8 @@ ${plans}
     window.addEventListener('keydown', (e) => {
       if (projectModal && !projectModal.classList.contains('hidden')) {
         if (e.key === 'Escape') closeProjectModal();
+        if (e.key === 'ArrowLeft') { currentPmImageIndex--; updatePmCarousel(); }
+        if (e.key === 'ArrowRight') { currentPmImageIndex++; updatePmCarousel(); }
       }
     });
 
