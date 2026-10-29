@@ -57,6 +57,10 @@ PAGES = [
         'prefix': 'service-ufh'
     },
     {
+        'url': 'https://www.oakwoodbuildingservicesnorfolk.co.uk/landscaping-north-norfolk',
+        'prefix': 'service-landscaping'
+    },
+    {
         'url': 'https://www.oakwoodbuildingservicesnorfolk.co.uk/',
         'prefix': 'homepage'
     }
